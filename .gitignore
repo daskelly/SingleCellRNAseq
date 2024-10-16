@@ -1,0 +1,11 @@
+data
+building_individual_markdown.txt
+quickbuild.sh
+render_all_locally.r
+AUTHORS
+CITATION
+CODE_OF_CONDUCT.html
+CONTRIBUTING.md
+Gemfile
+Gemfile.lock
+LICENSE.html
