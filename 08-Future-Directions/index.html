@@ -1,0 +1,784 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2024-10-16 05:53:54 -0400">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/syntax.css" />
+    
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/favicons/swc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/favicons/swc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/favicons/swc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/favicons/swc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/favicons/swc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/favicons/swc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/favicons/swc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/favicons/swc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Software Carpentry - Single Cell RNAseq"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../assets/favicons/swc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../assets/favicons/swc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../assets/favicons/swc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Future Directions &ndash; Single Cell RNAseq
+  </title>  
+
+  </head>
+  <body>
+
+    
+
+
+
+
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org" class="pull-left">
+        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="../index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="../setup.html">Setup</a></li>
+
+        
+        
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            
+            <li><a href="../01-introduction/index.html">Introduction to Single Cell RNA-seq</a></li>
+            
+            
+            <li><a href="../02-Experimental-Considerations/index.html">Experimental Considerations</a></li>
+            
+            
+            <li><a href="../03-Overview-scRNA-seq-Data/index.html">Overview of scRNA-seq Data</a></li>
+            
+            
+            <li><a href="../04-Quality-Control/index.html">Quality Control of scRNA-Seq Data</a></li>
+            
+            
+            <li><a href="../05-Common-Analyses/index.html">Common Analyses</a></li>
+            
+            
+            <li><a href="../06-Biology-Driven-Analyses/index.html">Biology Driven Analyses of scRNA-Seq</a></li>
+            
+            
+            <li><a href="../07-Analyzing-Your-Data/index.html">Analyzing Your Data</a></li>
+            
+            
+            <li><a href="../08-Future-Directions/index.html">Future Directions</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="../aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+        
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../reference.html">Reference</a></li>
+            
+            
+            
+              <li><a href="../about/index.html">About</a></li>
+            
+            
+            
+            
+              <li><a href="../discuss/index.html">Discussion</a></li>
+            
+            
+            
+            
+              <li><a href="../figures/index.html">Figures</a></li>
+            
+            
+            
+            
+              <li><a href="../guide/index.html">Instructor Notes</a></li>
+            
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="../LICENSE.html">License</a></li>
+	
+	
+	<li><a href="/edit//_episodes_rmd/08-Future-Directions.Rmd" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../07-Analyzing-Your-Data/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="../">Single Cell RNAseq</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Future Directions</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 30 min
+      <br/>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>What are some important concepts from the single cell field that we did not have time to discuss in this course?</p>
+</li>
+	
+	<li><p>What are some interesting future research directions in areas related to single cell transcriptomics?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Discuss some of the complexities of inferring cell composition from scRNA-Seq.</p>
+</li>
+	
+	<li><p>Explain what the concept of pseudotime is.</p>
+</li>
+	
+	<li><p>Be able to give an example of what could be learned from analyzing cell-cell communication.</p>
+</li>
+	
+	<li><p>Give examples of multimodal cell profiling and how it could help you understand a biological system.</p>
+</li>
+	
+	<li><p>List examples of spatial profiling technologies that are beginning to become more widely available.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<h2 id="topics-not-covered-in-detail-in-this-course">Topics not covered in detail in this course</h2>
+
+<p>There are a number of important topics in the field of single cell analysis
+that we have not had the time to cover in this course. In this lesson we
+will give a brief overview of some of these topics. We hope to give you
+enough of a background to begin your own research. We will point you to 
+one or a few resources or references
+that we feel are useful within the section on each 
+topic.</p>
+
+<h3 id="differences-in-cell-composition">Differences in cell composition</h3>
+
+<p>Single cell transcriptomics is a very powerful method for identifying
+differences in tissue cell composition. This sort of question was 
+usually addressed using methods like flow cytometry in the past, but flow
+cytometry requires knowing what you want to look for before you can
+quantify it. In scRNA-Seq we can take an entirely unbiased view of cell
+composition, and we can define cell subsets with more subtle changes in
+gene expression as opposed to only looking at broad classes of cell types
+with “On/Off” changes in cell surface receptor protein expression.</p>
+
+<p>Nevertheless, there are many complexities to understanding tissue cell
+composition using scRNA-Seq. Typically we quantify on the order of 
+thousands of cells per biological specimen in scRNA-Seq. Therefore, 
+quantification of cell types can be subject to significant variability due to
+statistical sampling alone, especially for rare cell types.
+Moreover, it is possible – and maybe even likely – that 
+cell types are variably susceptible to lysis or death during the cell
+preparation process. Finally, there are difficulties that
+are largely mathematical in nature. Tissue cell composition
+measurements are inherently composed of a number of different cell types
+that sum up to the whole tissue. When one cell type decreases in
+abundance, other cell types must increase (at least on a relative basis). 
+This type of data is called <em>compositional</em> data and requires
+special transformations in order to model changes in a
+statistically rigorous manner.</p>
+
+<p>Most single cell investigators use simple methods to look at changes
+in cell composition such as ANOVA or t-tests. 
+The 
+<a href="https://academic.oup.com/bioinformatics/article/38/20/4720/6675456">propeller</a>
+method is a nice and simple option and available in an
+easy-to-use R package. This figure is taken from Phipson et al 2022
+and shows an example of applying
+propeller to several different datasets:
+<img src="../fig/propeller.png" alt="Propeller changes in cell composition" width="600px" /></p>
+
+<p><a href="https://www.nature.com/articles/s41467-021-27150-6">scCODA</a> is a
+more complicated approach that uses a Bayesian model incorporating
+the compositional nature of the data. While the scCODA model is impressively
+comprehensive and rigorous, the software is more
+difficult to run and the output more difficult to interpret.</p>
+
+<h3 id="cell-cell-communication">Cell-cell communication</h3>
+
+<p>An analysis of possible cell-cell communication is one output that
+can be inferred from scRNA-Seq data. The basic idea is that we can 
+use databases of known receptor-ligand interactions in order to 
+predict cells that interact. Specifically, if cell type A expresses ligand X,
+and cell type B expresses the cognate receptor for ligand X, we can infer
+the possibility of communication between these two cell types.
+Of course scRNA-Seq data is not telling us whether that 
+receptor-ligand link is actually <em>active</em> at any particular moment in time,
+but it may be useful to understand which cells are communicating
+most/least and how lines of communication change in, say, a 
+drug-treated vs control condition.</p>
+
+<p>Many groups have developed analytical methods and tools for
+exploring the cell-cell communication landscape. 
+The best tools are able to draw on large databases of receptor-ligand
+interactions and to properly consider interactions that involve
+multiple subunit receptor-ligand complexes.
+One major tool for carrying out analysis of cell-cell communication
+is <a href="https://www.cellphonedb.org/">CellPhoneDB</a>
+published by 
+<a href="https://www.nature.com/articles/s41596-020-0292-x">Efremova et al. 2020</a>.
+This tool is widely used and has a web portal as well as a python
+package:
+<img src="../fig/cellphonedb_splash.jpg" alt="Landing page of CellphoneDB" width="600px" /></p>
+
+<p>Another option is <a href="http://www.cellchat.org/">CellChat</a>,
+published by 
+<a href="https://www.nature.com/articles/s41467-021-21246-9">Jin et al. 2021</a>
+and updated recently in a
+<a href="https://www.biorxiv.org/content/10.1101/2023.11.05.565674v1">preprint</a>
+and a <a href="https://www.nature.com/articles/s41596-024-01045-4">published protocol</a>.
+This method has an accompanying R package and an easy-to-use 
+standalone <code class="language-plaintext highlighter-rouge">Shiny</code> app <a href="https://github.com/sqjin/CellChatShiny">here</a>.</p>
+
+<h3 id="pseudotime-and-rna-velocity">Pseudotime and RNA velocity</h3>
+
+<p>Cells of various types differentiate from progenitor cells in ways
+that are as diverse as the cells themselves. Moreover, 
+cells can change state – for example, in response to external
+cues. When cells transit between developmental or functional states,
+the cell’s transcriptome is altered as some genes are turned on and
+others are turned off. In many cases the precise ordering of these
+intermediate
+changes is difficult or impossible to study as the cells cannot be
+cleanly isolated. 
+However, profiling a collection of cells that is changing state
+using scRNA-Seq can address this problem. Such a collection will
+have cells at different stages of the change in state. If we can 
+reconstruct the “transcriptional trajectory” connecting 
+states, it will allow us to better understand the transition.</p>
+
+<p>Pseudotime is the position of a cell along such a
+trajectory. Pseudotime is not necessarily equivalent to some
+real timescale, but 
+rather is “a latent (unobserved) dimension which measures the cells’ 
+progress through [a cellular] transition” 
+<a href="https://doi.org/10.1093%2Fbioinformatics%2Fbtw372">Reid and Wernisch 2016</a>. 
+<a href="https://cole-trapnell-lab.github.io/monocle3/">Monocle</a> is the software
+package that introduced the concept of pseudotime and 
+popularized the use of algorithms for reconstructing cellular
+trajectories using scRNA-Seq. As the Monocle documentation puts it:</p>
+
+<blockquote>
+  <p>Monocle uses an algorithm to learn the sequence of gene expression 
+changes each cell must go through as part of a dynamic biological 
+process. Once it has learned the overall “trajectory” of gene 
+expression changes, Monocle can place each cell at its proper position 
+in the trajectory. You can then use Monocle’s differential analysis 
+toolkit to find genes regulated over the course of the trajectory …
+If there are multiple outcomes for the process, Monocle will reconstruct 
+a “branched” trajectory. These branches correspond to cellular “decisions”,
+and Monocle provides powerful tools for identifying the genes affected 
+by them and involved in making them.</p>
+</blockquote>
+
+<p>In addition to Monocle 
+there are many, many algorithms and software packages for inferring 
+pseudotime. For a very nice list check out
+<a href="https://github.com/agitter/single-cell-pseudotime">Anthony Gitter’s github list</a>.</p>
+
+<p>A very clever technique that is somewhat related
+to pseudotime is called RNA velocity.
+RNA velocity was introcduced by 
+<a href="https://www.nature.com/articles/s41586-018-0414-6">La Manno et al. 2018</a>.
+They defined RNA velocity as the time derivative
+of a cell’s gene expression state. RNA velocity uses the 
+ratio of unspliced versus spliced RNAs in a cell to estimate
+whether a gene’s expression is currently increasing
+(unspliced &gt; spliced) or decreasing (spliced &gt; unspliced).
+<a href="https://scvelo.readthedocs.io/">scvelo</a> is a beautifully engineered
+toolkit that
+generalizes RNA velocity by relaxing previous model assumptions with a
+stochastic and a dynamical model that solves the full transcriptional dynamics. 
+See <a href="https://doi.org/10.1038/s41587-020-0591-3">Bergen et al. 2020</a> for
+more details.
+<img src="../fig/scvelo.jpg" alt="The scvelo website" width="600px" /></p>
+
+<p>Pseudotime/trajectory analysis and RNA velocity are related but distinct
+methods. Trajectory analysis attempts to build a continuous transcriptional
+gradient representing a path between groups of cells, but does not
+automatically infer a direction. In contrast, RNA velocity also deals with
+transitions between cellular states, but explicitly considers the
+directionality of the transitions.</p>
+
+<h2 id="multimodal-molecular-profiling">Multimodal molecular profiling</h2>
+
+<p>An important area of future inquiry in the single cell arena is the extension
+to so-called <em>multi-modal</em> profiling. This simply means profiling cells
+using not just transcriptomics, but via multiple data modalities. Some 
+common examples of multimodal profiling include:</p>
+
+<ul>
+  <li>single cell transcriptomics + single nucleus ATAC-Seq (chromatin accessibility)</li>
+  <li>single cell transcriptomics + single cell surface protein quantification (CITE-Seq)</li>
+  <li>single cell transcriptomics + immune repertoire profiling</li>
+</ul>
+
+<p><img src="../fig/multimodal_10x.jpg" alt="10x multimodal data option" width="600px" /></p>
+
+<p>(Image courtesy of 10X Genomics webpage)</p>
+
+<p>Some of these approaches provide multiple modes of data from the same 
+biological specimen but different individual cells, while others
+collect data from the same individual cells. Obviously, all else equal,
+the latter approach is preferred when it is possible. For example, the 10X 
+“Multiome” <a href="https://www.10xgenomics.com/products/single-cell-multiome-atac-plus-gene-expression">product</a>
+obtains chromatin accessibility and gene expression on every cell, which
+provides a more detailed portrait of how changes in chromatin perturb
+gene expression compared to having paired chromatin accessibility and
+gene expression data on different sets of cells.</p>
+
+<p>There is already a large literature on these topics. 
+<a href="https://www.nature.com/articles/s41592-019-0691-5">Zhu et al. 2020</a>
+wrote a nice commentary piece discussing methods and tools
+available for multimodel analysis in single cell genomics
+<a href="https://doi.org/10.1016%2Fj.cell.2021.04.048">Hao et al 2021</a>
+published a landmark paper that developed methods for integrating across
+different data modalities and implementing these methods in version
+4 of the Seurat package.</p>
+
+<h2 id="fixed-cell-profiling-options-and-probe-based-methods">Fixed cell profiling options and probe-based methods</h2>
+
+<p>In recent years it has become possible to profile the transcriptome
+of fixed single cells. The most widely used product for fixed cell
+profiling is 10X Genomics’ FLEX, which allows the profiling of RNA from 
+preserved (fixed) tissues. 
+FLEX uses specialized chemistry to reverse cross-linking in 
+formaldehyde-fixed samples, enabling efficient RNA capture while 
+preserving spatial and cellular context. This opens the door to studying 
+archived samples as well as offering flexibility in experimental design. 
+Such approaches may be particularly useful for retrospective studies and 
+clinical samples, where immediate processing is not possible.</p>
+
+<p>The FLEX product uses a probe-based system to assay gene expression.
+More broadly, there has recently been a growing interest in probe-based 
+methods for transcriptome profiling. This shift is partly due to 
+several advantages of this approach:</p>
+
+<ul>
+  <li>Target specificity: Probes provide precise targeting of specific genes or 
+ regions of interest, enhancing sensitivity and signal-to-noise ratio.</li>
+  <li>Cost efficiency: Probe-based approaches can be less expensive for 
+ targeted panels compared to whole transcriptome sequencing, especially for 
+ large-scale studies.</li>
+  <li>Compatibility with degraded samples: As alluded to above, probe-based
+ profiling can perform well with formalin-fixed paraffin-embedded (FFPE) 
+ tissues.</li>
+</ul>
+
+<h2 id="spatial-profiling">Spatial profiling</h2>
+
+<p>Spatial profiling methods are an interesting and rapidly growing
+area of research and technology. 
+These approaches are not always truly single cell biology and
+in many cases blend the ethos of single cell genomics with approaches
+traditionally used in fields like pathology.
+Nevertheless we mention them here because these technologies are 
+revealing previously inaccessible information about the molecular properties
+of cells in their native tissue context, and the future 
+holds promise for increasingly more accurate and powerful technologies.</p>
+
+<p>10X Genomics offers the 
+<a href="https://www.10xgenomics.com/products/spatial-gene-expression">Visium platform</a>.
+The original Visium protocol profiles
+a slice of tissue that is 6.5mm square using 5,000 spots each 50um in diameter.
+These spots are large enough that they are not truly single cell, 
+rather each spot typically captures between 1-10 cells. Thus in some
+ways the data from each spot can be thought of as a “mini” bulk RNA-Seq.
+Nevertheless it can be very useful to assay gene expression in this spatially
+resolved manner. More recently 10X has released the
+<a href="https://www.10xgenomics.com/products/visium-hd-spatial-gene-expression">Visium HD</a>
+product which profiles tissues of the same size (6.5mm square) but across
+millions of 2um square spots with no gaps, achieving true single cell
+resolution.</p>
+
+<p>10X also offers the 
+<a href="https://www.10xgenomics.com/platforms/xenium">Xenium In Situ platform</a>
+which can profile up to 5,000 RNA targets with subcellular resolution.</p>
+
+<p>Another spatial profiling option is 
+<a href="https://nanostring.com/products/geomx-digital-spatial-profiler/geomx-dsp-overview/">Nanostring’s GeoMx Digital Spatial Profiler</a>.
+This is a high-plex protein and RNA platform that uses indexing
+oligonucleotides assigned to targets of interest. This allows measuring
+hundreds of potential protein and RNA biomarkers. 
+A new Nanostring product is <a href="https://nanostring.com/products/cosmx-spatial-molecular-imager/">CosMx</a>
+which can profile at subcellular resolution (while GeoMx profiles
+with coarser resolution – groups of cells).</p>
+
+<p>A final spatial profiling option is the 
+<a href="https://www.akoyabio.com/phenocycler/">PhenoCycler system from Akoya Biosciences</a>.
+This system (formerly known as CODEX) is a commercial implementation
+of a device that was pioneered in an academic lab
+(protocol reviewed in <a href="https://pubmed.ncbi.nlm.nih.gov/34215862/">ref</a>).
+The system allows profiling of millions of cells across a whole slide
+with single-cell resolution. This system originally profiled 
+dozens of proteins but has expanded to include the capability to
+capture 100+ protein and RNA biomarkers.
+<img src="../fig/akoya.jpg" alt="Akoya PhenoCycler machine" width="600px" /></p>
+
+<p>(Images courtesy of Akoya Biosciences webpage)</p>
+
+<p>For each of these instruments tissue can be prepared in a variety
+of ways. In many cases the techology is moving towards profiling of
+Formalin-Fixed Paraffin-Embedded (FFPE) samples. The technological
+landscape is sure to change quickly and the future is bright for 
+spatial profiling!</p>
+
+<p>As you can see above, the landscape is complex. Getting help from AI
+can be a fun and informative way to learn more about your choices,
+including familiarizing yourself with the specific properties of
+each method and the tradeoffs you must weigh. Here is an example
+of the type of inquiry we have found useful:
+<img src="../fig/chatgpt_spatial.jpg" alt="ChatGPT spatial biology chat" width="600px" /></p>
+
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>There exists a rich suite of concepts and methods for working with scRNA-Seq data that goes beyond cell type identification and into inference about how cells are changing and interacting with each other.</p>
+</li>
+    
+    <li><p>Multimodal datasets and spatially resolved technologies will be key to future inquiry in single cell and related fields.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../07-Analyzing-Your-Data/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 license" id="license-info" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2024
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://software-carpentry.org">Software Carpentry Foundation</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+	
+	
+	<a href="/edit//_episodes_rmd/08-Future-Directions.Rmd" data-checker-ignore>Edit on GitHub</a>
+	
+	
+	/
+	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
+	/
+	<a href="/">Source</a>
+	/
+	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
+	/
+	<a href="mailto:team@carpentries.org">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/lesson.js"></script>
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://carpentries.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<script src="../assets/js/anchor.min.js"></script>
+<script>
+    anchors.add();
+</script>
+
+  </body>
+</html>

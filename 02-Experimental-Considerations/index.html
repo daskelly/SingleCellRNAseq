@@ -1,0 +1,765 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2024-10-16 05:53:54 -0400">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/syntax.css" />
+    
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/favicons/swc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/favicons/swc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/favicons/swc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/favicons/swc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/favicons/swc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/favicons/swc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/favicons/swc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/favicons/swc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Software Carpentry - Single Cell RNAseq"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../assets/favicons/swc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../assets/favicons/swc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../assets/favicons/swc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Experimental Considerations &ndash; Single Cell RNAseq
+  </title>  
+
+  </head>
+  <body>
+
+    
+
+
+
+
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org" class="pull-left">
+        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="../index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="../setup.html">Setup</a></li>
+
+        
+        
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            
+            <li><a href="../01-introduction/index.html">Introduction to Single Cell RNA-seq</a></li>
+            
+            
+            <li><a href="../02-Experimental-Considerations/index.html">Experimental Considerations</a></li>
+            
+            
+            <li><a href="../03-Overview-scRNA-seq-Data/index.html">Overview of scRNA-seq Data</a></li>
+            
+            
+            <li><a href="../04-Quality-Control/index.html">Quality Control of scRNA-Seq Data</a></li>
+            
+            
+            <li><a href="../05-Common-Analyses/index.html">Common Analyses</a></li>
+            
+            
+            <li><a href="../06-Biology-Driven-Analyses/index.html">Biology Driven Analyses of scRNA-Seq</a></li>
+            
+            
+            <li><a href="../07-Analyzing-Your-Data/index.html">Analyzing Your Data</a></li>
+            
+            
+            <li><a href="../08-Future-Directions/index.html">Future Directions</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="../aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+        
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../reference.html">Reference</a></li>
+            
+            
+            
+              <li><a href="../about/index.html">About</a></li>
+            
+            
+            
+            
+              <li><a href="../discuss/index.html">Discussion</a></li>
+            
+            
+            
+            
+              <li><a href="../figures/index.html">Figures</a></li>
+            
+            
+            
+            
+              <li><a href="../guide/index.html">Instructor Notes</a></li>
+            
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="../LICENSE.html">License</a></li>
+	
+	
+	<li><a href="/edit//_episodes_rmd/02-Experimental-Considerations.Rmd" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../01-introduction/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="../">Single Cell RNAseq</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../03-Overview-scRNA-seq-Data/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Experimental Considerations</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 45 min
+      <br/>
+      <strong>Exercises:</strong> 5 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>How do I design a rigorous and reproducible single cell RNAseq experiment?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Understand the importance of biological replication for rigor and reproducibility.</p>
+</li>
+	
+	<li><p>Understand how one could pool biological specimens for scRNA-Seq.</p>
+</li>
+	
+	<li><p>Understand why confounding experimental batch with the variable of interest makes it impossible to disentangle the two.</p>
+</li>
+	
+	<li><p>Understand the different data modalities in single-cell sequencing and be able to select a modality to answer an experimental question.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<p>In this lesson we will discuss several key factors you should keep in mind 
+when designing and executing your single cell study. Single cell 
+transcriptomics is in many ways more customizable than bulk transcriptomics. 
+This can be an advantage but can also complicate study design.</p>
+
+<p>To begin, we note that you should be aware of the distinction between 
+cells <em>loaded</em> vs cells <em>captured</em>. In a 10X scRNA-Seq study
+you prepare a cell suspension and decide how many cells should be loaded 
+onto the 10X Chromium instrument. The cells flow through the microfluidics
+into oil-water emulsion droplets, but not all cells are captured.
+Typically somewhere between 50-70% of cells are captured. 10X provides
+estimates for the capture rates of samples profiled using their 
+3’ gene expression kit 
+<a href="https://kb.10xgenomics.com/hc/en-us/articles/360001378811-What-is-the-maximum-number-of-cells-that-can-be-profiled-">here</a>.</p>
+
+<h2 id="doubletsmultiplets---a-ubiquitous-property-of-droplet-single-cell-assays">Doublets/multiplets - a ubiquitous property of droplet single cell assays</h2>
+
+<p>In droplet single cell transcriptomics, a key reason the technology “works” is 
+because most droplets contain at most one cell. After all, if droplets 
+contained more than one cell the technology would no longer be profiling 
+single cells! However, due to the nature of the cell loading of droplets (which 
+can be modeled accurately using Poisson statistics), even in a perfect 
+experiment it is inevitable that some droplets will contain more than one cell. 
+These are called <em>multiplets</em> – or doublets, since the vast majority of 
+multiple-cell droplets contain two cells. 
+Contrast with <em>singlets</em>, which contain only one cell.</p>
+
+<p>There are two considerations we might keep in mind when thinking about
+singlets vs. doublets. First, not every droplet contains exactly one
+gel bead. The initial paper describing the 
+10X technology, published in 2017, showed the following histogram:</p>
+
+<p><img src="../fig/Zhang_etal_2017_NatComm_Fig1_poisson.jpg" alt="Histogram showing the number of gel beads per droplet" /></p>
+
+<p>Therefore the large majority of droplets contain zero or one gel beads.
+This is good. If a droplet contained, say, two gel beads, then even if a
+single cell was captured in that droplet it would appear to be two cells
+because the transcripts from that cell would be tagged with one of two
+cell barcodes.</p>
+
+<p>The second consideration we might keep in mind when thinking about
+singlets vs. doublets is that it can be hard to obtain a ground truth.
+If, say, two cells of the same cell type were captured in a single droplet,
+how would we know there were two? It might be easier if two cells of 
+very different cell types were together, since those cells would likely
+express very different genes. One way we can look for doublets is to run 
+a so-called “barnyard” experiment where we mix cells from multiple
+species. For example, Sathyamurthy et al. 2018 
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5849084/">link</a> used
+single nucleus transcriptomics to explore the cellular heterogeneity of the
+mouse spinal cord. They loaded mouse and human cells together and showed
+that only a small number of droplets appeared to contain both a human and 
+a mouse cell.</p>
+
+<p><img src="../fig/Sathyamurthy_Fig1.jpeg" alt="Figure showing a barnyard experiment" /></p>
+
+<p>It is important to realize that the doublet rate is not fixed but rather 
+depends on the number of cells <em>loaded</em> into the 10X Chromium machine. 
+The more cells are loaded, the higher the doublet rate. The figure below shows 
+the relationship between the number of cells loaded and the doublet rate. 
+This figure is derived from the 10X User Guide for their 
+Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 product,
+but the basic trends should hold across other versions of this product as well.</p>
+
+<p><img src="../fig/cell_loading.png" alt="Recovery and multiplet rate as a function of cells loaded" width="400px" /></p>
+
+<p>In a future lesson we will discuss software options for trying to identify and 
+remove doublets prior to drawing biological conclusions from data. 
+Unfortunately this process is not always straightforward and we are usually 
+forced to accept the reality that we likely cannot remove <em>all</em> doublets from 
+our data.</p>
+
+<h2 id="how-to-decide-on-the-parameters-of-the-experiment">How to decide on the parameters of the experiment</h2>
+
+<p>There are a number of parameters in a typical scRNA-Seq experiment that are 
+customizable according to the particular details of each study.</p>
+
+<h3 id="number-of-cells">Number of cells</h3>
+
+<p>A typical number of captured cells (target cell number) would be 6,000-8,000 
+cells on a standard 10X Chromium, or 16,000-20,000 cells on the higher 
+throughput Chromium X.
+At these cell capture numbers, the doublet rates are expected to stay
+relatively low (the JAX Single Cell Biology Laboratory estimates
+empirical doublet rates of 0.9% and 0.4% per 1,000 cells for 
+Chromium and Chromium X, respectively).
+At these doublet rates we would expect to obtain less than 100 doublets in
+standard experiments.
+One may also choose to “overload” or “super load” the Chromium instrument.
+In this strategy we load more than the typical number of cells,
+they flow through the instrument more quickly than usual, and more
+droplets end up with multiple cells.
+Therefore our data contains more multiplets; however we also obtain more
+total cells. If we are in a setting where we can tolerate a higher
+doublet rate this may be an efficient way of profiling more 
+cells.</p>
+
+<h3 id="sequencing-depth">Sequencing depth</h3>
+
+<p>There is no fixed rule for how deeply we should sequence in our scRNA-Seq
+experiment. Moreover, the depth of sequencing will vary significantly between
+cells no matter what we choose.</p>
+
+<p>Nevertheless, a reasonable rule of thumb would be to sequence to a depth of 
+approximately 50,000 - 75,000 reads per cell.
+If we are profiling cells that have relatively few genes expressed,
+such as lymphocytes, we might target a sequencing depth closer to 
+25,000 - 50,000 reads per cell. If we are profiling cells that express many 
+genes, such as stem cells, we might go significantly higher, to 
+100,000 or even 200,000 reads per cell.</p>
+
+<h3 id="number-of-samples">Number of samples</h3>
+
+<p>It is generally more economical to run at least a few scRNA-Seq samples
+than to run just one or two. For example, JAX’s Single Cell Biology
+Laboratory gives a substantial per-library discount for running 3+ 
+samples as opposed to one or two samples. This is because the chip
+used to run samples through Chromium has 8 (or 16) channels which cannot
+be reused.</p>
+
+<p>The most efficient way to organize your experiment is to design it to be run 
+in batches of 8.</p>
+
+<h2 id="biological-replication">Biological replication</h2>
+
+<p>Proper biological replication is the cornerstone of a statistically 
+well-powered experiment. This is recognized across nearly all of biology. 
+In the early days of single cell RNA-Seq, the main focus of many investigations 
+was demonstrating the technology and often biological replication was missing. 
+As scRNA-Seq has matured, it has become increasingly important to 
+include biological replication in order to have confidence that our findings 
+are statistically robust.</p>
+
+<p>Note that the tens of thousands of cells sequenced in a typical sample do 
+<em>not</em> constitute biological replication. In order to show a biologically 
+meaningful change in cell composition, the emergence of a particular cell 
+subset, or difference in gene expression we need samples harvested from 
+multiple individuals.</p>
+
+<p><img src="../fig/replicate_single_cell.png" alt="Biological Replication" width="600px" /></p>
+
+<p>In a strict sense, biological replication would entail independently rearing 
+multiple genetically identical animals, subjecting them to identical conditions, 
+and harvesting cells in an identical manner. This is one strength of working in 
+the mouse that we can leverage at JAX. However, there are also instances where 
+we can obtain useful biological replication without meeting these 
+strict requirements. For example, a disease study in humans may profile 
+single cells collected from affected and unaffected individuals, and could 
+provide insights as long as the groups are not systematically different. 
+Turning to the mouse, a fine-grained time course may not require biological 
+replication at every time point because – depending on the questions 
+investigators wish to ask – cells from different individual mice collected 
+at different time points might be analyzed together to attain robust results.</p>
+
+<p>How many biological replicates should one collect? This question is difficult 
+to answer with a “one size fits all” approach but we recommend an 
+<em>absolute minimum</em> of three biological replicates per experimental group. 
+More is almost always better, but there are obviously trade offs with respect 
+to budget and the time it takes to harvest samples. There are many studies 
+that have attempted to model the power of single cell RNA-Seq experiments, 
+including differential gene expression and differences in cell composition. 
+We will not discuss these studies in detail in this course, but some may be 
+useful for your own work:</p>
+
+<ul>
+  <li>Schmid et al. 2021. scPower accelerates and optimizes the design of 
+ multi-sample single cell transcriptomic 
+ studies. <a href="https://doi.org/10.1038/s41467-021-26779-7">https://doi.org/10.1038/s41467-021-26779-7</a></li>
+  <li>Svensson et al. 2017. Power analysis of single-cell RNA-sequencing 
+ experiments. <a href="https://doi.org/10.1038/nmeth.4220">https://doi.org/10.1038/nmeth.4220</a></li>
+  <li>Davis et al. 2019. SCOPIT: sample size calculations for single-cell 
+ sequencing experiments. <a href="https://doi.org/10.1186/s12859-019-3167-9">https://doi.org/10.1186/s12859-019-3167-9</a></li>
+  <li>Zimmerman et al. 2021. Hierarchicell: an R-package for estimating power 
+ for tests of differential expression with single-cell 
+ data. <a href="https://doi.org/10.1186%2Fs12864-021-07635-w">https://doi.org/10.1186%2Fs12864-021-07635-w</a></li>
+  <li>Vieth et al. 2017. powsimR: power analysis for bulk and single cell 
+ RNA-seq experiments. <a href="https://doi.org/10.1093/bioinformatics/btx435j">https://doi.org/10.1093/bioinformatics/btx435j</a></li>
+  <li>Su et al. 2020. Simulation, power evaluation and sample size 
+ recommendation for single-cell 
+ RNA-seq. <a href="https://doi.org/10.1093/bioinformatics/btaa607">https://doi.org/10.1093/bioinformatics/btaa607</a></li>
+</ul>
+
+<h2 id="pooling-options">Pooling options</h2>
+
+<p>Given the relatively high expense of each scRNA-Seq sample and the importance 
+of proper biological replication laid out above, the opportunity to pool samples 
+and run them together is a powerful tool in the single cell researcher’s 
+toolkit. 
+In pooled single cell genomics, there are two primary methods of tracking 
+the sample to which each individual cell belongs. First, one can attach a 
+unique barcode (“hashtag”) to all cells of each sample, typically using an 
+oligonucleotide-tagged antibody to a ubiquitous cell surface protein or an 
+alternative (e.g. lipid-reactive) reagent.</p>
+
+<p><img src="../fig/smibert_etal_2018_Fig1A.jpg" alt="Overview of cell hashing approach" width="800px" /></p>
+
+<p>(Figure from <a href="https://pubmed.ncbi.nlm.nih.gov/30567574/">Smibert et al. 2018</a>)
+This approach was pioneered by 
+<a href="https://pubmed.ncbi.nlm.nih.gov/30567574/">Smibert et al</a>. The hashtag is 
+read out in a dedicated library processing step and used to demultiplex samples 
+based on knowledge of the pre-pooling barcoding strategy. This is the basis of 
+the techniques known as “cell hashing”, “lipid hashing”, and the recently 
+introduced 10X Genomics CellPlex multiplexing system. The hashtagging approach 
+is accurate, however it is important to note that the extra experimental steps 
+may impose obstacles. Hashtagged multiplexing requires extra sample preparation 
+steps for barcoding, which can affect the viability and quality of cell 
+preparations, may be less effective for certain tissues and cell types, and 
+the increased sample handling may itself impose a significant burden in large 
+projects.</p>
+
+<p>A second, alternative, approach is to use natural genetic variation as a 
+built-in barcode and demultiplex cells using SNVs and indels unique to each 
+sample.</p>
+
+<p><img src="../fig/genetic_demultiplexing.png" alt="Genetic Deultiplexing" width="800px" /></p>
+
+<p>This approach was pioneered by 
+<a href="https://www.nature.com/articles/nbt.4042">Kang et al.</a>. 
+In contrast to the hashtagging approach, genetic demultiplexing requires 
+no special reagents or additional steps, and can be used for any tissue or 
+cell type. However, the genetic demultiplexing approach requires that the 
+samples being pooled are sufficiently genetically distinct for them to be 
+distinguishable using transcribed genetic variation. This condition is 
+typically met in human studies or in studies of genetically diverse mice. 
+Of course, this approach would not suffice for a study of a single inbred 
+mouse strain profiled under multiple conditions.
+One advantage of genetic demultiplexing is that we can use the genetic 
+information to filter out any mixed background doublets, allowing us to
+obtain data that contains fewer doublets than we would otherwise
+expect.</p>
+
+<h2 id="avoid-confounding-batch-with-experimental-variables">Avoid Confounding Batch with Experimental Variables</h2>
+
+<p>When designing an experiment, it is tempting to lay samples out in some order 
+that is easy to remember. If you are performing a dose-response experiment, 
+you might order your samples from the lowest dose to the highest dose. If you 
+are assaying transcript levels in different tissues, you might sort the 
+samples by tissue. However, if you maintain this order, you risk confounding 
+single cell batches with your experimental batches. This is called “confounding” 
+and it makes it impossible to statistically disentangle the batch effect 
+from your experimental question.</p>
+
+<p>Let’s look at an example, illustrated in the figure below. Suppose that you have
+analyzed cells from control and treated mice, which you keep in separate cages,
+as shown in the left panel below. 
+At euthanasia, you might isolate cells from the mice in each cage sequentially. 
+If you isolate cells from the control mice first, then those cells will sit 
+longer than the treated cells before being delivered to the single cell core. 
+Also, you might place the control cells in the first set of tubes and the 
+treated cells in the last set of tubes. When you deliver your tubes to the core,
+they may be placed on the 10X instrument in the same order. This will confound 
+holding time and instrument channel with the control and treated groups. A 
+better design is shown in the right panel, in which treatment is not
+confounded with time and chip channel.</p>
+
+<p><img src="../fig/flow_cell_batch.png" alt="Batch Confounding" width="1000px" /></p>
+
+<blockquote class="checklist">
+  <h2 id="recommended-reading">Recommended Reading</h2>
+
+  <p>Luecken MD, Theis FJ (2019) Current best practices in single-cell RNA-seq analysis: a tutorial.
+Mol Syst Biol <a href="https://pubmed.ncbi.nlm.nih.gov/31217225/">link</a></p>
+
+  <p>Andrews TS, Kiselev VY, McCarthy D, Hemberg M (2021) Tutorial: guidelines for the computational analysis of single-cell RNA sequencing data. Nat Protoc <a href="https://pubmed.ncbi.nlm.nih.gov/33288955/">link</a></p>
+
+</blockquote>
+
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Due to the high variance in single-cell data sets, a well-powered study with adequate biological replication is essential for rigor &amp; reproducibility.</p>
+</li>
+    
+    <li><p>Increasing the number of cells also increases the multiplet rate.</p>
+</li>
+    
+    <li><p>Pooling cells using hashtagging is a useful way to reduce costs, but also stresses cells and may affect cell viability.</p>
+</li>
+    
+    <li><p>Pooling cells from genetically diverse individuals may allow cells to be demultiplexed using genetic variants that differ between samples.</p>
+</li>
+    
+    <li><p>Do not confound experimental batch with any technical aspect of the experiment, i.e. sample pooling or flow cell assignment.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../01-introduction/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../03-Overview-scRNA-seq-Data/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 license" id="license-info" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2024
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://software-carpentry.org">Software Carpentry Foundation</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+	
+	
+	<a href="/edit//_episodes_rmd/02-Experimental-Considerations.Rmd" data-checker-ignore>Edit on GitHub</a>
+	
+	
+	/
+	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
+	/
+	<a href="/">Source</a>
+	/
+	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
+	/
+	<a href="mailto:team@carpentries.org">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/lesson.js"></script>
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://carpentries.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<script src="../assets/js/anchor.min.js"></script>
+<script>
+    anchors.add();
+</script>
+
+  </body>
+</html>

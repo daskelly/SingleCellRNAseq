@@ -1,0 +1,1051 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2024-10-16 05:53:54 -0400">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/syntax.css" />
+    
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/favicons/swc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/favicons/swc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/favicons/swc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/favicons/swc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/favicons/swc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/favicons/swc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/favicons/swc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/favicons/swc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Software Carpentry - Single Cell RNAseq"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../assets/favicons/swc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../assets/favicons/swc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../assets/favicons/swc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Common Analyses &ndash; Single Cell RNAseq
+  </title>  
+
+  </head>
+  <body>
+
+    
+
+
+
+
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org" class="pull-left">
+        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="../index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="../setup.html">Setup</a></li>
+
+        
+        
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            
+            <li><a href="../01-introduction/index.html">Introduction to Single Cell RNA-seq</a></li>
+            
+            
+            <li><a href="../02-Experimental-Considerations/index.html">Experimental Considerations</a></li>
+            
+            
+            <li><a href="../03-Overview-scRNA-seq-Data/index.html">Overview of scRNA-seq Data</a></li>
+            
+            
+            <li><a href="../04-Quality-Control/index.html">Quality Control of scRNA-Seq Data</a></li>
+            
+            
+            <li><a href="../05-Common-Analyses/index.html">Common Analyses</a></li>
+            
+            
+            <li><a href="../06-Biology-Driven-Analyses/index.html">Biology Driven Analyses of scRNA-Seq</a></li>
+            
+            
+            <li><a href="../07-Analyzing-Your-Data/index.html">Analyzing Your Data</a></li>
+            
+            
+            <li><a href="../08-Future-Directions/index.html">Future Directions</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="../aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+        
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../reference.html">Reference</a></li>
+            
+            
+            
+              <li><a href="../about/index.html">About</a></li>
+            
+            
+            
+            
+              <li><a href="../discuss/index.html">Discussion</a></li>
+            
+            
+            
+            
+              <li><a href="../figures/index.html">Figures</a></li>
+            
+            
+            
+            
+              <li><a href="../guide/index.html">Instructor Notes</a></li>
+            
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="../LICENSE.html">License</a></li>
+	
+	
+	<li><a href="/edit//_episodes_rmd/05-Common-Analyses.Rmd" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../04-Quality-Control/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="../">Single Cell RNAseq</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../06-Biology-Driven-Analyses/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Common Analyses</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 120 min
+      <br/>
+      <strong>Exercises:</strong> 10 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>What are the most common single cell RNA-Seq analyses?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Understand the form of common Seurat commands and how to chain them together.</p>
+</li>
+	
+	<li><p>Learn how to normalize, find variable features, reduce dimensionality, and cluster your scRNA-Seq data.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">suppressPackageStartupMessages</span><span class="p">(</span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">))</span><span class="w">
+</span><span class="n">suppressPackageStartupMessages</span><span class="p">(</span><span class="n">library</span><span class="p">(</span><span class="n">Seurat</span><span class="p">))</span><span class="w">
+
+</span><span class="n">data_dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s1">'data'</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># set a seed for reproducibility in case any randomness used below</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">1418</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="a-note-on-seurat-functions">A Note on Seurat Functions</h2>
+
+<p>The Seurat package is set up so that we primarily work with a 
+Seurat object containing our single cell data and metadata.
+Let’s say we are working with our Seurat object <code class="language-plaintext highlighter-rouge">liver</code>. 
+The usual way we might call a function to do something with our
+data looks like:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>liver &lt;- DoSomething(liver, param1 = TRUE, param2 = 0.3)
+</code></pre></div></div>
+
+<p>However, since the <code class="language-plaintext highlighter-rouge">DoSomething()</code> function returns the modified
+Seurat object, we can also pipe together multiple commands to do
+multiple things to our object. That could look something like:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>liver &lt;- DoSomething(liver, param1 = TRUE, param2 = 0.3) %&gt;%
+           DoSomethingElse(param1 = 3) %&gt;%
+           DoAThirdThing(param1 = c(1, 4, 6))
+</code></pre></div></div>
+
+<p>The pipe operator passes the results of the first command as the argument 
+to the next command.</p>
+
+<p>We can just as well use the piping operator <code class="language-plaintext highlighter-rouge">%&gt;%</code> even if 
+we are calling only one function:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>liver &lt;- liver %&gt;%
+           DoSomething(param1 = TRUE, param2 = 0.3)
+</code></pre></div></div>
+
+<p>Recently, base <code class="language-plaintext highlighter-rouge">R</code> added its own pipe operator <code class="language-plaintext highlighter-rouge">|&gt;</code>. This does essentially the
+same operation, with different behavior only in a few somewhat rare 
+instances. You can read more about the differences between
+<code class="language-plaintext highlighter-rouge">%&gt;%</code> and <code class="language-plaintext highlighter-rouge">|&gt;</code> at the 
+<a href="https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/">this link</a>.</p>
+
+<p>In this lesson (and elsewhere in the course) we may alternate between
+these slightly different coding styles. Please ask us for clarification
+if you are having difficulty seeing how our example code is 
+doing what it is supposed to do.</p>
+
+<h3 id="normalization">Normalization</h3>
+
+<p><img src="../fig/single_cell_flowchart_4.png" width="800px" alt="Single Cell Flowchart" /></p>
+
+<p>Instead of working with raw count data measured across cells
+that were sequenced to highly variable depths, we conduct
+normalization to try to make gene expression values follow
+a more stable distribution as well as being more comparable
+between cells.</p>
+
+<p>Single cell gene expression
+count data is usually approximately log-normally distributed. 
+Many statistical methods work best when the data is normally distributed. 
+We also would like to correct for variability in sequencing depth 
+between cells, the nature of which is purely technical.
+Log normalization will give us normalized gene expression which represents
+the log of the number of counts per 10,000 reads.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">liver</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">liver</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+            </span><span class="n">NormalizeData</span><span class="p">(</span><span class="n">normalization.method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"LogNormalize"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This method of normalizing is pretty simple. The way it works is
+to follow a simple formula like
+<code class="language-plaintext highlighter-rouge">norm_count = log((count + 1)/total_counts) * 10000</code>
+where <code class="language-plaintext highlighter-rouge">total_counts</code> is the total number of reads in each cell.</p>
+
+<p>There are other normalization methods that are more complicated and
+may outperform the log normalization method. Two examples are:</p>
+
+<ul>
+  <li>Normalization based on multinomial methods as outlined by
+ <a href="https://pubmed.ncbi.nlm.nih.gov/31870412/">Townes et al. 2019</a></li>
+  <li>Normalization using regularized negative binomial regression
+ <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1874-1">Hafemeister and Satija 2019</a>, 
+ with a <a href="https://satijalab.org/seurat/articles/sctransform_vignette.html">Seurat vignette here</a></li>
+</ul>
+
+<p>However, no normalization method has been demonstrated to be universally
+and unambiguously better than simple log normalization.</p>
+
+<blockquote class="challenge">
+  <h2 id="challenge-1">Challenge 1</h2>
+  <p>Where is the log-normaliztion stored? Try using the str() command to look at 
+the structure of the liver object (i.e. str(liver)).</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-to-challenge-1">Solution to Challenge 1</h2>
+
+    <p>str(liver)
+Formal class ‘Seurat’ [package “SeuratObject”] with 13 slots
+  ..@ assays      :List of 1
+  …
+  …
+  …
+  ..@ commands    :List of 1
+  .. ..$ NormalizeData.RNA:Formal class ‘SeuratCommand’ [package “SeuratObject”] with 5 slots
+  .. .. .. ..@ name       : chr “NormalizeData.RNA”
+  .. .. .. ..@ time.stamp : POSIXct[1:1], format: “2023-09-12 09:43:16”
+  .. .. .. ..@ assay.used : chr “RNA”
+  .. .. .. ..@ call.string: chr “NormalizeData(., normalization.method = "LogNormalize")”
+  .. .. .. ..@ params     :List of 5
+  .. .. .. .. ..$ assay               : chr “RNA”
+  .. .. .. .. ..$ normalization.method: chr “LogNormalize”
+  .. .. .. .. ..$ scale.factor        : num 10000
+  .. .. .. .. ..$ margin              : num 1
+  .. .. .. .. ..$ verbose             : logi TRUE
+  ..@ tools       : list()</p>
+
+    <p>This is a lot to absorb! Look for a line containing “@ commands” toward the 
+bottom of the object which you printed out. Notice that the next line 
+says “NomalizeData”. Further down, you can see a line which says 
+“$ normalization.method: chr “LogNormalize”. This is the line which tells
+you that the liver object has stored the log-normalized information.</p>
+  </blockquote>
+</blockquote>
+
+<h3 id="finding-variable-features">Finding Variable Features</h3>
+
+<p><img src="../fig/single_cell_flowchart_5.png" width="800px" alt="Single Cell Flowchart" /></p>
+
+<p>Next we will find a subset of features showing high cell-to-cell variation 
+in the dataset (that is, they are highly expressed in some cells and lowly
+expressed in others).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">liver</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">liver</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+              </span><span class="n">FindVariableFeatures</span><span class="p">(</span><span class="n">nfeatures</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2000</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Identify the 25 most highly variable genes</span><span class="w">
+</span><span class="n">top25</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">VariableFeatures</span><span class="p">(</span><span class="n">liver</span><span class="p">),</span><span class="w"> </span><span class="m">25</span><span class="p">)</span><span class="w">
+
+</span><span class="n">plot1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">VariableFeaturePlot</span><span class="p">(</span><span class="n">liver</span><span class="p">)</span><span class="w">
+</span><span class="n">LabelPoints</span><span class="p">(</span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plot1</span><span class="p">,</span><span class="w"> </span><span class="n">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top25</span><span class="p">,</span><span class="w"> </span><span class="n">xnudge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> 
+            </span><span class="n">ynudge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">repel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-05-var_features-1.png" alt="plot of chunk var_features" width="612" />
+<p class="caption">plot of chunk var_features</p>
+</div>
+
+<p>Once again, let’s look at the Seurat liver object and see how it stores the variable
+genes.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str</span><span class="p">(</span><span class="n">liver</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Formal class 'Seurat' [package "SeuratObject"] with 13 slots
+  ..@ assays      :List of 1
+  .. ..$ RNA:Formal class 'Assay5' [package "SeuratObject"] with 8 slots
+  .. .. .. ..@ layers    :List of 2
+  .. .. .. .. ..$ counts:Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  .. .. .. .. .. .. ..@ i       : int [1:103377764] 10 14 28 30 32 49 52 53 56 67 ...
+  .. .. .. .. .. .. ..@ p       : int [1:44254] 0 3264 6449 9729 13445 16988 20052 23140 26417 29561 ...
+  .. .. .. .. .. .. ..@ Dim     : int [1:2] 20120 44253
+  .. .. .. .. .. .. ..@ Dimnames:List of 2
+  .. .. .. .. .. .. .. ..$ : NULL
+  .. .. .. .. .. .. .. ..$ : NULL
+  .. .. .. .. .. .. ..@ x       : num [1:103377764] 1 1 1 2 1 6 1 1 2 1 ...
+  .. .. .. .. .. .. ..@ factors : list()
+  .. .. .. .. ..$ data  :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  .. .. .. .. .. .. ..@ i       : int [1:103377764] 10 14 28 30 32 49 52 53 56 67 ...
+  .. .. .. .. .. .. ..@ p       : int [1:44254] 0 3264 6449 9729 13445 16988 20052 23140 26417 29561 ...
+  .. .. .. .. .. .. ..@ Dim     : int [1:2] 20120 44253
+  .. .. .. .. .. .. ..@ Dimnames:List of 2
+  .. .. .. .. .. .. .. ..$ : NULL
+  .. .. .. .. .. .. .. ..$ : NULL
+  .. .. .. .. .. .. ..@ x       : num [1:103377764] 0.779 0.779 0.779 1.212 0.779 ...
+  .. .. .. .. .. .. ..@ factors : list()
+  .. .. .. ..@ cells     :Formal class 'LogMap' [package "SeuratObject"] with 1 slot
+  .. .. .. .. .. ..@ .Data: logi [1:44253, 1:2] TRUE TRUE TRUE TRUE TRUE TRUE ...
+  .. .. .. .. .. .. ..- attr(*, "dimnames")=List of 2
+  .. .. .. .. .. .. .. ..$ : chr [1:44253] "AAACGAATCCACTTCG-2" "AAAGGTACAGGAAGTC-2" "AACTTCTGTCATGGCC-2" "AATGGCTCAACGGTAG-2" ...
+  .. .. .. .. .. .. .. ..$ : chr [1:2] "counts" "data"
+  .. .. .. .. .. ..$ dim     : int [1:2] 44253 2
+  .. .. .. .. .. ..$ dimnames:List of 2
+  .. .. .. .. .. .. ..$ : chr [1:44253] "AAACGAATCCACTTCG-2" "AAAGGTACAGGAAGTC-2" "AACTTCTGTCATGGCC-2" "AATGGCTCAACGGTAG-2" ...
+  .. .. .. .. .. .. ..$ : chr [1:2] "counts" "data"
+  .. .. .. ..@ features  :Formal class 'LogMap' [package "SeuratObject"] with 1 slot
+  .. .. .. .. .. ..@ .Data: logi [1:20120, 1:2] TRUE TRUE TRUE TRUE TRUE TRUE ...
+  .. .. .. .. .. .. ..- attr(*, "dimnames")=List of 2
+  .. .. .. .. .. .. .. ..$ : chr [1:20120] "Xkr4" "Rp1" "Sox17" "Mrpl15" ...
+  .. .. .. .. .. .. .. ..$ : chr [1:2] "counts" "data"
+  .. .. .. .. .. ..$ dim     : int [1:2] 20120 2
+  .. .. .. .. .. ..$ dimnames:List of 2
+  .. .. .. .. .. .. ..$ : chr [1:20120] "Xkr4" "Rp1" "Sox17" "Mrpl15" ...
+  .. .. .. .. .. .. ..$ : chr [1:2] "counts" "data"
+  .. .. .. ..@ default   : int 1
+  .. .. .. ..@ assay.orig: chr(0) 
+  .. .. .. ..@ meta.data :'data.frame':	20120 obs. of  8 variables:
+  .. .. .. .. ..$ vf_vst_counts_mean                 : num [1:20120] 0.000136 0.000429 0.295528 0.547918 0.447337 ...
+  .. .. .. .. ..$ vf_vst_counts_variance             : num [1:20120] 0.000136 0.001062 0.749957 0.900155 0.549817 ...
+  .. .. .. .. ..$ vf_vst_counts_variance.expected    : num [1:20120] 0.000142 0.000476 0.412618 0.907597 0.689343 ...
+  .. .. .. .. ..$ vf_vst_counts_variance.standardized: num [1:20120] 0.955 2.045 1.818 0.992 0.798 ...
+  .. .. .. .. ..$ vf_vst_counts_variable             : logi [1:20120] FALSE TRUE TRUE FALSE FALSE FALSE ...
+  .. .. .. .. ..$ vf_vst_counts_rank                 : int [1:20120] NA 999 1228 NA NA NA NA NA NA 1428 ...
+  .. .. .. .. ..$ var.features                       : chr [1:20120] NA "Rp1" "Sox17" NA ...
+  .. .. .. .. ..$ var.features.rank                  : int [1:20120] NA 999 1228 NA NA NA NA NA NA 1428 ...
+  .. .. .. ..@ misc      : Named list()
+  .. .. .. ..@ key       : chr "rna_"
+  ..@ meta.data   :'data.frame':	44253 obs. of  11 variables:
+  .. ..$ orig.ident  : Factor w/ 1 level "liver: scRNA-Seq": 1 1 1 1 1 1 1 1 1 1 ...
+  .. ..$ nCount_RNA  : num [1:44253] 8476 8150 8139 10083 9517 ...
+  .. ..$ nFeature_RNA: int [1:44253] 3264 3185 3280 3716 3543 3064 3088 3277 3144 3511 ...
+  .. ..$ sample      : chr [1:44253] "CS48" "CS48" "CS48" "CS48" ...
+  .. ..$ digest      : chr [1:44253] "inVivo" "inVivo" "inVivo" "inVivo" ...
+  .. ..$ typeSample  : chr [1:44253] "scRnaSeq" "scRnaSeq" "scRnaSeq" "scRnaSeq" ...
+  .. ..$ cxds_score  : num [1:44253] NA NA NA NA NA NA NA NA NA NA ...
+  .. ..$ bcds_score  : num [1:44253] NA NA NA NA NA NA NA NA NA NA ...
+  .. ..$ hybrid_score: num [1:44253] NA NA NA NA NA NA NA NA NA NA ...
+  .. ..$ percent.mt  : num [1:44253] 3.04 5.35 4.67 4.75 3.89 ...
+  .. ..$ keep        : logi [1:44253] TRUE TRUE TRUE TRUE TRUE TRUE ...
+  ..@ active.assay: chr "RNA"
+  ..@ active.ident: Factor w/ 1 level "liver: scRNA-Seq": 1 1 1 1 1 1 1 1 1 1 ...
+  .. ..- attr(*, "names")= chr [1:44253] "AAACGAATCCACTTCG-2" "AAAGGTACAGGAAGTC-2" "AACTTCTGTCATGGCC-2" "AATGGCTCAACGGTAG-2" ...
+  ..@ graphs      : list()
+  ..@ neighbors   : list()
+  ..@ reductions  : list()
+  ..@ images      : list()
+  ..@ project.name: chr "liver: scRNA-Seq"
+  ..@ misc        : list()
+  ..@ version     :Classes 'package_version', 'numeric_version'  hidden list of 1
+  .. ..$ : int [1:3] 5 0 2
+  ..@ commands    :List of 2
+  .. ..$ NormalizeData.RNA       :Formal class 'SeuratCommand' [package "SeuratObject"] with 5 slots
+  .. .. .. ..@ name       : chr "NormalizeData.RNA"
+  .. .. .. ..@ time.stamp : POSIXct[1:1], format: "2024-10-15 21:26:18"
+  .. .. .. ..@ assay.used : chr "RNA"
+  .. .. .. ..@ call.string: chr "NormalizeData(., normalization.method = \"LogNormalize\")"
+  .. .. .. ..@ params     :List of 5
+  .. .. .. .. ..$ assay               : chr "RNA"
+  .. .. .. .. ..$ normalization.method: chr "LogNormalize"
+  .. .. .. .. ..$ scale.factor        : num 10000
+  .. .. .. .. ..$ margin              : num 1
+  .. .. .. .. ..$ verbose             : logi TRUE
+  .. ..$ FindVariableFeatures.RNA:Formal class 'SeuratCommand' [package "SeuratObject"] with 5 slots
+  .. .. .. ..@ name       : chr "FindVariableFeatures.RNA"
+  .. .. .. ..@ time.stamp : POSIXct[1:1], format: "2024-10-15 21:26:28"
+  .. .. .. ..@ assay.used : chr "RNA"
+  .. .. .. ..@ call.string: chr "FindVariableFeatures(., nfeatures = 2000)"
+  .. .. .. ..@ params     :List of 12
+  .. .. .. .. ..$ assay              : chr "RNA"
+  .. .. .. .. ..$ selection.method   : chr "vst"
+  .. .. .. .. ..$ loess.span         : num 0.3
+  .. .. .. .. ..$ clip.max           : chr "auto"
+  .. .. .. .. ..$ mean.function      :function (mat, display_progress)  
+  .. .. .. .. ..$ dispersion.function:function (mat, display_progress)  
+  .. .. .. .. ..$ num.bin            : num 20
+  .. .. .. .. ..$ binning.method     : chr "equal_width"
+  .. .. .. .. ..$ nfeatures          : num 2000
+  .. .. .. .. ..$ mean.cutoff        : num [1:2] 0.1 8
+  .. .. .. .. ..$ dispersion.cutoff  : num [1:2] 1 Inf
+  .. .. .. .. ..$ verbose            : logi TRUE
+  ..@ tools       : list()
+</code></pre></div></div>
+
+<p>Look in the “@ commands” section. You will notice that there are now two items in the 
+liver of commands. “$ NormalizeData.RNA” is the first item and “indVariableFeatures.RNA”
+is the second one. This is where the the information about the variable genes is stored.
+You can see this in the line which says:</p>
+
+<p>’’’
+@ call.string: chr “FindVariableFeatures(., nfeatures = 2000)
+‘’’</p>
+
+<h2 id="cell-cycle-assignment">Cell Cycle Assignment</h2>
+
+<p>We will also show how to predict cell cycle state.
+This approach is outlined in the Seurat vignette at
+<a href="https://satijalab.org/seurat/articles/cell_cycle_vignette.html">this link</a>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cc.genes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readLines</span><span class="p">(</span><span class="n">file.path</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span><span class="w">
+  </span><span class="s1">'regev_lab_cell_cycle_genes_mm.fixed.txt'</span><span class="p">))</span><span class="w">
+</span><span class="n">s.genes</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cc.genes</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">43</span><span class="p">]</span><span class="w">
+</span><span class="n">g2m.genes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cc.genes</span><span class="p">[</span><span class="m">44</span><span class="o">:</span><span class="m">98</span><span class="p">]</span><span class="w">
+
+</span><span class="n">liver</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">CellCycleScoring</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> 
+                          </span><span class="n">s.features</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">s.genes</span><span class="p">,</span><span class="w"> 
+                          </span><span class="n">g2m.features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g2m.genes</span><span class="p">,</span><span class="w"> 
+                          </span><span class="n">set.ident</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Seurat will provide a quantitative estimate of the cell’s chance of being
+in different phases of the cell cycle <code class="language-plaintext highlighter-rouge">S.Score</code> and <code class="language-plaintext highlighter-rouge">G2M.Score</code>, as well as
+a categorical prediction of which phase the cell is in 
+(<code class="language-plaintext highlighter-rouge">Phase</code> – G1, G2M, S).</p>
+
+<h3 id="scale-data">Scale Data</h3>
+
+<p><img src="../fig/single_cell_flowchart_6.png" width="800px" alt="Single Cell Flowchart" /></p>
+
+<p>Now we apply a linear transformation that is often used in initial 
+scRNA-Seq processing. This transformation standardizes the expression of
+each gene, setting the mean across cells to 0 and variance to 1. 
+This helps all genes to contribute to the inferred variability rather
+than just the highly-expressed genes.</p>
+
+<p>We will “regress out” the signals of technical confounders including
+%MT and the number of genes expressed. We might also choose to regress out
+other variables such as cell cycle stage (if we wish to examine 
+cellular heterogeneity independent of cell cycle), number of UMIs,
+etc.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">liver</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">liver</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">ScaleData</span><span class="p">(</span><span class="n">vars.to.regress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"percent.mt"</span><span class="p">,</span><span class="w"> </span><span class="s2">"nFeature_RNA"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="principal-component-analysis-pca">Principal Component Analysis (PCA)</h3>
+
+<p><img src="../fig/single_cell_flowchart_7.png" width="800px" alt="Single Cell Flowchart" /></p>
+
+<p>Next we reduce the dimensionality of the data. You have probably heard
+of PCA as a technique for summarizing major axes of variation in a dataset.</p>
+
+<p>Here is a brief <a href="https://setosa.io/ev/principal-component-analysis/">tutorial</a> 
+if PCA is new to you.</p>
+
+<p>Here, we perform PCA on the single cell gene expression data in order to
+place each cell in a multidimensional space with lower dimension (say 20-40)
+than the complete expression matrix (~20,000 genes).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">liver</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">liver</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+              </span><span class="n">RunPCA</span><span class="p">(</span><span class="n">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">npcs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It is usually not very useful to view the raw PCs themselves.
+There’s nothing obvious that we can glean from the following PC plot:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DimPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">reduction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pca"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-05-pcplot-1.png" alt="plot of chunk pcplot" width="612" />
+<p class="caption">plot of chunk pcplot</p>
+</div>
+
+<p>Instead we will take some of the PCs and use them for a further
+summarization of the data. Namely, we will use the PCs as input to the
+UMAP (or t-SNE) algorithm which projects our cells onto a 2D space
+(the computer screen).</p>
+
+<p>A significant challenge in scRNA-Seq is deciding how many PCs to use.
+You can think of each PC as capturing pathway-level transcriptional variation
+across the cells in your dataset. Thus even if the transcriptome is sparse
+within each cell (it is), you can still compare different cells across major
+axes of variation. We don’t want to use too <em>few</em> PCs, otherwise we 
+might miss significant axes of variation (e.g. a cell subtype or minor cell 
+type). We also don’t want to use too <em>many</em> PCs since, as you go out in PC-space,
+the PCs increasingly represent more noise and less biological reality.</p>
+
+<p>We will use a very simple method to choose the number of PCs: the elbow
+method. Using this method we look for where the elbow plot stops dropping
+precipitously.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElbowPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">ndims</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-05-elbow-1.png" alt="plot of chunk elbow" width="612" />
+<p class="caption">plot of chunk elbow</p>
+</div>
+
+<p>Let’s zoom in more and see what things like under 50 PCs.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElbowPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">ndims</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-05-elbow2-1.png" alt="plot of chunk elbow2" width="612" />
+<p class="caption">plot of chunk elbow2</p>
+</div>
+
+<p>We would say that the standard deviation in PCs really starts to stablize
+around N = 24 PCs. Let’s use this value moving forward.
+For a more in-depth analysis we would try a variety of values and 
+attempt to decide which value gives us the results that are most 
+biologically sensible.</p>
+
+<p>There is also a function in Seurat, <code class="language-plaintext highlighter-rouge">JackStraw()</code>, that one may use
+to try to determine the statistical significance of principal 
+component scores. Specifically, it randomly permutes a subset of data, 
+and calculates projected PCA scores for these random genes. Then it
+compares the PCA scores for the random genes with the observed PCA scores 
+to determine statistical signifance. We are not using this function here
+because it is a bit slow and because it often does not give any better 
+results than the simple method of looking at an elbow plot.</p>
+
+<p>All this said, the major question here – how many PCs to select in order
+to capture the important variation within your scRNA-Seq data in a
+reduced dimension space – is still unresolved and your best bet is 
+to explore different values and see what they give you!</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_pc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">24</span><span class="w">
+</span><span class="n">ElbowPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">ndims</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">40</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num_pc</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-05-elbow3-1.png" alt="plot of chunk elbow3" width="612" />
+<p class="caption">plot of chunk elbow3</p>
+</div>
+
+<!-- Do we need to do batch correction with Harmony? The authors of the
+liver cell atlas did it ...
+See https://github.com/guilliottslab/scripts_GuilliamsEtAll_Cell2022/blob/main/3b_Harmony.R
+-->
+
+<h2 id="clustering">Clustering</h2>
+
+<p><img src="../fig/single_cell_flowchart_8.png" width="800px" alt="Single Cell Flowchart" /></p>
+
+<p>Seurat uses a graph-based approach to cluster cells with similar
+transcriptomic profiles. 
+We start by constructing the shared nearest-neighbor graph. This
+computes a distance metric between the cells (in PC-space) and 
+constructs the shared nearest-neighbor graph by calculating the
+neighborhood overlap (Jaccard index) between every cell and its 
+20 (by default) nearest neighbors.
+Then the shared nearest-neighbor graph is used to identify
+cell clusters using a modularity optimization based clustering
+algorithm. 
+The Seurat help pages for the functions below,
+<a href="https://satijalab.org/seurat/reference/findneighbors">FindNeighbors</a>
+and 
+<a href="https://satijalab.org/seurat/reference/findclusters">FindClusters</a>,
+provide some references if you are interested in digging into
+further details of this clustering procedure.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">liver</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">FindNeighbors</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">reduction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'pca'</span><span class="p">,</span><span class="w"> 
+                       </span><span class="n">dims</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">num_pc</span><span class="p">,</span><span class="w"> </span><span class="n">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+         </span><span class="n">FindClusters</span><span class="p">(</span><span class="n">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">resolution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.3</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="dimensionality-reduction-umap-tsne-etc">Dimensionality reduction (UMAP, tSNE, etc)</h2>
+
+<p><img src="../fig/single_cell_flowchart_9.png" width="800px" alt="Single Cell Flowchart" /></p>
+
+<p>As mentioned above, dimensionality reduction allows you to actually 
+visualize your data! The two methods below are widely used in the
+single cell community.</p>
+
+<blockquote>
+  <p>Uniform Manifold Approximation and Projection (UMAP) <a href="https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf">van der Maaten &amp; Hinton, 2008</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p>t-Distributed Stochastic Neighbor Embedding (t-SNE) <a href="https://arxiv.org/abs/1802.03426">McUnnes et al</a></p>
+</blockquote>
+
+<p>These methods generally do a very effective job of putting similar points near each other in the reduced-dimensionality space. Thus cells from 
+the same clusters are likely to be placed in the same region of the UMAP/t-SNE.</p>
+
+<p>UMAP is more widely used the t-SNE at the current time.
+Note that you should caution yourself not to overinterpret UMAP plots.
+Although UMAP does optimize both local and global similarity for points
+being projected onto a 2D space, UMAP contains no guarantee that similar points
+must be near each other.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">liver</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">RunUMAP</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">reduction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'pca'</span><span class="p">,</span><span class="w"> </span><span class="n">dims</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">num_pc</span><span class="p">,</span><span class="w"> 
+                 </span><span class="n">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note that we are using the principal components computed from normalized gene 
+expression to compute UMAP dimensionality reduction and we are also using the 
+principal components to compute a shared nearest neighbor graph and find 
+clusters. These two tasks are independent and could be done in either order. 
+Very often the points that are near each other in UMAP space are also near 
+neighbors and belong to the same cluster, but this is not always the case.</p>
+
+<p>Finally, we plot the clusters which we found using the principal components in
+UMAP space.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">UMAPPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">label.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-05-plot_umap-1.png" alt="plot of chunk plot_umap" width="612" />
+<p class="caption">plot of chunk plot_umap</p>
+</div>
+
+<p>Let’s color the cells in each cluster by cell cycle phase using <code class="language-plaintext highlighter-rouge">UMAPPlot()</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">UMAPPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">group.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Phase'</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-05-unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2" width="612" />
+<p class="caption">plot of chunk unnamed-chunk-2</p>
+</div>
+
+<h2 id="saving">Saving</h2>
+
+<p>We will again use the Seurat object in the next lesson. Save it now and we will 
+load it at the beginning of the next lesson.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">saveRDS</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file.path</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span><span class="w"> </span><span class="s1">'lesson05.rds'</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="session-info">Session Info</h2>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sessionInfo</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-apple-darwin20
+Running under: macOS 15.0.1
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] Seurat_5.1.0       SeuratObject_5.0.2 sp_2.1-4           lubridate_1.9.3   
+ [5] forcats_1.0.0      stringr_1.5.1      dplyr_1.1.4        purrr_1.0.2       
+ [9] readr_2.1.5        tidyr_1.3.1        tibble_3.2.1       ggplot2_3.5.1     
+[13] tidyverse_2.0.0    knitr_1.48        
+
+loaded via a namespace (and not attached):
+  [1] deldir_2.0-4           pbapply_1.7-2          gridExtra_2.3         
+  [4] rlang_1.1.4            magrittr_2.0.3         RcppAnnoy_0.0.22      
+  [7] spatstat.geom_3.3-3    matrixStats_1.4.1      ggridges_0.5.6        
+ [10] compiler_4.4.1         png_0.1-8              vctrs_0.6.5           
+ [13] reshape2_1.4.4         pkgconfig_2.0.3        fastmap_1.2.0         
+ [16] labeling_0.4.3         utf8_1.2.4             promises_1.3.0        
+ [19] tzdb_0.4.0             xfun_0.48              jsonlite_1.8.9        
+ [22] goftest_1.2-3          highr_0.11             later_1.3.2           
+ [25] spatstat.utils_3.1-0   irlba_2.3.5.1          parallel_4.4.1        
+ [28] cluster_2.1.6          R6_2.5.1               ica_1.0-3             
+ [31] spatstat.data_3.1-2    stringi_1.8.4          RColorBrewer_1.1-3    
+ [34] reticulate_1.39.0      spatstat.univar_3.0-1  parallelly_1.38.0     
+ [37] lmtest_0.9-40          scattermore_1.2        Rcpp_1.0.13           
+ [40] tensor_1.5             future.apply_1.11.2    zoo_1.8-12            
+ [43] sctransform_0.4.1      httpuv_1.6.15          Matrix_1.7-0          
+ [46] splines_4.4.1          igraph_2.0.3           timechange_0.3.0      
+ [49] tidyselect_1.2.1       abind_1.4-8            spatstat.random_3.3-2 
+ [52] codetools_0.2-20       miniUI_0.1.1.1         spatstat.explore_3.3-2
+ [55] listenv_0.9.1          lattice_0.22-6         plyr_1.8.9            
+ [58] shiny_1.9.1            withr_3.0.1            ROCR_1.0-11           
+ [61] evaluate_1.0.1         Rtsne_0.17             future_1.34.0         
+ [64] fastDummies_1.7.4      survival_3.6-4         polyclip_1.10-7       
+ [67] fitdistrplus_1.2-1     pillar_1.9.0           KernSmooth_2.23-24    
+ [70] plotly_4.10.4          generics_0.1.3         RcppHNSW_0.6.0        
+ [73] hms_1.1.3              munsell_0.5.1          scales_1.3.0          
+ [76] globals_0.16.3         xtable_1.8-4           glue_1.8.0            
+ [79] lazyeval_0.2.2         tools_4.4.1            data.table_1.16.2     
+ [82] RSpectra_0.16-2        RANN_2.6.2             leiden_0.4.3.1        
+ [85] dotCall64_1.2          cowplot_1.1.3          grid_4.4.1            
+ [88] colorspace_2.1-1       nlme_3.1-164           patchwork_1.3.0       
+ [91] cli_3.6.3              spatstat.sparse_3.1-0  spam_2.11-0           
+ [94] fansi_1.0.6            viridisLite_0.4.2      uwot_0.2.2            
+ [97] gtable_0.3.5           digest_0.6.37          progressr_0.14.0      
+[100] ggrepel_0.9.6          htmlwidgets_1.6.4      farver_2.1.2          
+[103] htmltools_0.5.8.1      lifecycle_1.0.4        httr_1.4.7            
+[106] mime_0.12              MASS_7.3-60.2         
+</code></pre></div></div>
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Seurat has flexible functionality to normalize, process, and visualize your scRNA-Seq data.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../04-Quality-Control/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../06-Biology-Driven-Analyses/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 license" id="license-info" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2024
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://software-carpentry.org">Software Carpentry Foundation</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+	
+	
+	<a href="/edit//_episodes_rmd/05-Common-Analyses.Rmd" data-checker-ignore>Edit on GitHub</a>
+	
+	
+	/
+	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
+	/
+	<a href="/">Source</a>
+	/
+	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
+	/
+	<a href="mailto:team@carpentries.org">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/lesson.js"></script>
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://carpentries.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<script src="../assets/js/anchor.min.js"></script>
+<script>
+    anchors.add();
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,685 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2024-10-16 05:53:54 -0400">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/syntax.css" />
+    
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/favicons/swc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/favicons/swc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/favicons/swc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/favicons/swc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/favicons/swc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/favicons/swc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/favicons/swc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/favicons/swc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Software Carpentry - Single Cell RNAseq"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../assets/favicons/swc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../assets/favicons/swc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../assets/favicons/swc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Analyzing Your Data &ndash; Single Cell RNAseq
+  </title>  
+
+  </head>
+  <body>
+
+    
+
+
+
+
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org" class="pull-left">
+        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="../index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="../setup.html">Setup</a></li>
+
+        
+        
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            
+            <li><a href="../01-introduction/index.html">Introduction to Single Cell RNA-seq</a></li>
+            
+            
+            <li><a href="../02-Experimental-Considerations/index.html">Experimental Considerations</a></li>
+            
+            
+            <li><a href="../03-Overview-scRNA-seq-Data/index.html">Overview of scRNA-seq Data</a></li>
+            
+            
+            <li><a href="../04-Quality-Control/index.html">Quality Control of scRNA-Seq Data</a></li>
+            
+            
+            <li><a href="../05-Common-Analyses/index.html">Common Analyses</a></li>
+            
+            
+            <li><a href="../06-Biology-Driven-Analyses/index.html">Biology Driven Analyses of scRNA-Seq</a></li>
+            
+            
+            <li><a href="../07-Analyzing-Your-Data/index.html">Analyzing Your Data</a></li>
+            
+            
+            <li><a href="../08-Future-Directions/index.html">Future Directions</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="../aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+        
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../reference.html">Reference</a></li>
+            
+            
+            
+              <li><a href="../about/index.html">About</a></li>
+            
+            
+            
+            
+              <li><a href="../discuss/index.html">Discussion</a></li>
+            
+            
+            
+            
+              <li><a href="../figures/index.html">Figures</a></li>
+            
+            
+            
+            
+              <li><a href="../guide/index.html">Instructor Notes</a></li>
+            
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="../LICENSE.html">License</a></li>
+	
+	
+	<li><a href="/edit//_episodes_rmd/07-Analyzing-Your-Data.Rmd" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../06-Biology-Driven-Analyses/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="../">Single Cell RNAseq</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../08-Future-Directions/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Analyzing Your Data</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 5 min
+      <br/>
+      <strong>Exercises:</strong> 60 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>Can I analyze my own single cell RNA-Seq experiment?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Identify a workflow for analyzing your data.</p>
+</li>
+	
+	<li><p>Be aware of key decision points where your choices influence analysis outcomes.</p>
+</li>
+	
+	<li><p>Understand that there are specific approaches that can be used to analyze very large datasets.</p>
+</li>
+	
+	<li><p>Know how to seek help with your work.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<p>In this lesson we will dive into the data that you bring.
+It is not required that you bring along data. We will not necessarily
+discuss any new questions that we did not cover earlier in the course;
+rather, this lesson is an opportunity to see how some of these issues
+play out in a set of diverse datasets that have different
+characteristics.</p>
+
+<p>If you have your own data, you might set a goal of completing quality
+control, normalization, basic clustering, and identifying major
+cell clusters. If you are working with data from a publication, you might
+try to reproduce – as best you can – one of the main figures from the
+paper.</p>
+
+<h2 id="points-to-keep-in-mind-as-you-work-with-your-data">Points to keep in mind as you work with your data</h2>
+
+<ul>
+  <li>You can find a high-level overview of the scRNA-Seq workflow by reviewing
+ lessons 3 and 4 of this course.</li>
+  <li>If you have your own data it may be helpful to find a published dataset 
+ from the same tissue which will likely be valuable for confirming the cell 
+ types that you see in your data.</li>
+  <li>Your cell/gene filtering parameters may be quite different from those we 
+ used earlier in this course.</li>
+  <li>The number of PCs that you select for dimensionality reduction is an 
+ important quantity and you may wish to examine results from more than one
+ value to determine how they change.</li>
+  <li>Your clustering resolution will obviously affect the clusters that you
+ detect and can easily be altered to match your intuition regarding the
+ heterogeneity of cells in your sample.</li>
+</ul>
+
+<h2 id="a-review-of-a-typical-seurat-scrna-seq-analysis-pipeline">A review of a typical Seurat scRNA-Seq analysis pipeline</h2>
+
+<pre><code class="language-{}">obj &lt;- CreateSeuratObject(counts, project = 'my project',
+        meta.data = metadata, min.cells = 5) %&gt;%
+        PercentageFeatureSet(pattern = "^mt-", col.name = "percent.mt")
+obj &lt;- subset(obj, subset = nFeature_RNA &gt; 250 &amp; nFeature_RNA &lt; 5000 &amp; nCount_RNA &gt; 500)
+</code></pre>
+
+<p>Analyze using base Seurat workflow</p>
+
+<pre><code class="language-{}">obj &lt;- NormalizeData(obj, normalization.method = "LogNormalize") %&gt;% 
+    FindVariableFeatures(nfeatures = 2000) %&gt;% 
+    ScaleData(vars.to.regress = c("percent.mt", "nCount_RNA")) %&gt;%
+    RunPCA(verbose = FALSE, npcs = 100)
+</code></pre>
+
+<p>Look at your PC’s and decide how many to use for dimensionality reduction
+and clustering:</p>
+
+<pre><code class="language-{}">ElbowPlot(obj, ndims = 100)
+# let's use 24 PCs
+obj &lt;- FindNeighbors(obj, reduction = 'pca', dims = 1:24, verbose = FALSE) %&gt;%
+    FindClusters(verbose = FALSE, resolution = 0.3) %&gt;%
+    RunUMAP(reduction = 'pca', dims = 1:X, verbose = FALSE)
+</code></pre>
+
+<h2 id="computational-efficiency-for-very-large-datasets">Computational efficiency for very large datasets</h2>
+
+<p>In this section of the workshop, everyone will have the chance to work with
+a dataset of their choice. You may end up choosing to work with a dataset
+that is much larger than the example data we have been working with.
+For the purposes of this workshop, we will consider a “very large” dataset
+to be one with at least hundreds of thousands, if not millions, of cells.</p>
+
+<p>Not long ago it was very impressive to profile thousands of cells.
+Today larger labs and/or consortia are fairly routinely profiling 
+millions of cells!
+From an analytical perspective, these very large datasets must be thought 
+of differently than smaller datasets. Very large datasets may often
+cause memory or disk space errors if one tries to use conventional methods
+to analyze them (e.g. the methods we have shown earlier in this course).</p>
+
+<p>Here we will mention a few possible solutions for working with very large
+datasets. This is not an exhaustive list but we think it is a reasonable
+menu of options:</p>
+
+<p><!-- * Be clever in your analysis. Reduce dimensionality of subunits of your data -->
+ <!-- (e.g. samples) using something like PCA, and integrate in this  -->
+ <!-- reduced-dimensional subspace, which will be less computationally intensive -->
+ <!-- than trying to operate on all data simultaneously. For example, see the  -->
+ <!-- section on reciprocal PCA at  -->
+ <!-- [this link](https://satijalab.org/seurat/archive/v3.2/integration.html) --></p>
+
+<ul>
+  <li>Downsample your data by randomly sub-sampling so that you can work with
+ a smaller dataset of (say) 100k cells. While this ameliorates issues of
+ computational efficiency, it is highly undesireable to discard a 
+ significant fraction of your data and we do not recommend this approach 
+ unless you are doing a rough preliminary analysis of your data.</li>
+  <li>Combine very similar cells into mini-bulk samples in order to 
+ drastically reduce the number of cells. Methods available to do this include
+ Metacells <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02667-1">Ben-Kiki et al. 2022</a> 
+ and SuperCell <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04861-1">Bilous et al. 2022</a>.
+ This is an appealing approach as scRNA-Seq data is sparse so it seems
+ natural to form mini-bulks of similar cells. However, analyzing data
+ processed in this manner can be challenging because it can be difficult to
+ interpret differences between “metacells” that are formed from varying
+ numbers of real cells.</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">BPCells</code> package which leverages dramatic improvements in 
+ low-level handling of the data (storing data using bitpacked compressed
+ binary files and disk-backed analysis capabilities) to increase speed. This
+ package is directly integrated with <code class="language-plaintext highlighter-rouge">Seurat</code> (see a vignette demonstrating
+ this integration at <a href="https://satijalab.org/seurat/articles/seurat5_bpcells_interaction_vignette">this link</a>)
+ and <a href="https://bnprks.github.io/BPCells/articles/web-only/benchmarks.html">benchmarks</a>
+ indicate vastly improved workflow efficiency particularly
+ with respect to RAM usage. There should be no downside to using this approach
+ other than the need for disk space to write the additional binary files.</li>
+  <li>Take advantage of <code class="language-plaintext highlighter-rouge">Seurat</code>’s “sketch-based” analysis methods. This is a 
+ method that is a bit like smart subsampling of your data but with several 
+ added bonuses. The idea of sketching was introduced in
+ <a href="https://doi.org/10.1016/j.cels.2019.05.003">Hie et al. 2019</a> and seeks to
+ subsample from a large scRNA-Seq dataset with the goal of preserving both
+ common and rare cell types. This is a much better approach than random
+ subsampling because rare cells could turn out to be among the most interesting
+ cells in your data! The real game-changer when it comes to <code class="language-plaintext highlighter-rouge">Seurat</code> is
+ the introduction in <code class="language-plaintext highlighter-rouge">Seurat</code> version 5 of built-in methods for sketch 
+ analysis. This means that you can do the sketch-based sampling within 
+ Seurat, carry out a typical workflow (finding variable features, 
+ running PCA, clustering), and then <em>extend</em> these back to <em>ALL</em> cells. 
+ There is an excellent <code class="language-plaintext highlighter-rouge">Seurat</code> vignette on the sketch-based analysis 
+ approach <a href="https://satijalab.org/seurat/articles/seurat5_sketch_analysis">here</a>.
+ The only caveat with this approach is that some <code class="language-plaintext highlighter-rouge">Seurat</code> functions 
+ have not yet (fall 2024) been modified to support the sketch-based approach.</li>
+</ul>
+
+<h2 id="working-with-your-own-data-integration-and-label-transfer">Working With Your Own Data: Integration and Label Transfer</h2>
+
+<p>When analyzing your own data, you may find it useful to 
+obtain someone else’s previously published data (or your lab’s
+unpublished data) with which someone has already identified 
+cell clusters. You might then “bootstrap” your own analyses off
+of this existing data. Assuming the data you are using is derived
+from the same (or a similar) tissue, and that there are no 
+enormous differences in the techology used to profile the cells,
+you can use the cell labels identified in the other dataset to
+try to identify your own clusters. This process can be called
+“integration” when two or more datasets are merged in some way, and 
+“label transfer” when the cell cluster labels are transferred from
+one dataset to another.</p>
+
+<p>If you wish to try this process with your own data, you may find
+the Seurat 
+<a href="https://satijalab.org/seurat/archive/v3.0/integration.html">Integration and Label Transfer vignette</a>
+helpful.</p>
+
+<h2 id="if-you-dont-have-your-own-data-further-explorations-of-our-liver-data">If You Don’t Have Your Own Data: Further Explorations of Our Liver Data</h2>
+
+<p>If you don’t have your own data you might choose to do some further
+exploration of the liver data we have been working with throughout
+the course. You can do anything you like - be creative and try to 
+investigate any aspect that you are curious about!
+Here are a few suggestions of things that you could try:</p>
+
+<ul>
+  <li>Change filtering parameters (e.g. <code class="language-plaintext highlighter-rouge">percent.mt</code> or number of reads) and see how it affects your analysis.</li>
+  <li>Adjust the number of variable genes that you choose. Try varying across a wide range (e.g. 100 vs 10,000).</li>
+  <li>Adjust the number of PCs you select.</li>
+  <li>Adjust the clustering resolution.</li>
+  <li>Subcluster some cells that you might be interested in to see if there is any “hidden” heterogeneity that was not apparent when viewing all cells.</li>
+  <li>Change the normalization method you use. The <code class="language-plaintext highlighter-rouge">sctransform</code> method is a statistical modeling approach that uses the negative binomial distribution. For a vignette on using it within Seurat, see <a href="https://satijalab.org/seurat/articles/sctransform_vignette.html">this link</a>.</li>
+</ul>
+
+<h3 id="session-info">Session Info</h3>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sessionInfo</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-apple-darwin20
+Running under: macOS 15.0.1
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] knitr_1.48
+
+loaded via a namespace (and not attached):
+ [1] compiler_4.4.1  magrittr_2.0.3  cli_3.6.3       tools_4.4.1    
+ [5] glue_1.8.0      vctrs_0.6.5     stringi_1.8.4   stringr_1.5.1  
+ [9] xfun_0.48       lifecycle_1.0.4 rlang_1.1.4     evaluate_1.0.1 
+</code></pre></div></div>
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>There are excellent tools for helping you analyze your scRNA-Seq data.</p>
+</li>
+    
+    <li><p>Pay attention to points we have stressed in this course and points that are stressed in analysis vignettes that you may find elsewhere.</p>
+</li>
+    
+    <li><p>There is a vibrant single cell community at JAX and online (e.g. Twitter) where you can seek out help.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../06-Biology-Driven-Analyses/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../08-Future-Directions/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 license" id="license-info" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2024
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://software-carpentry.org">Software Carpentry Foundation</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+	
+	
+	<a href="/edit//_episodes_rmd/07-Analyzing-Your-Data.Rmd" data-checker-ignore>Edit on GitHub</a>
+	
+	
+	/
+	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
+	/
+	<a href="/">Source</a>
+	/
+	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
+	/
+	<a href="mailto:team@carpentries.org">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/lesson.js"></script>
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://carpentries.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<script src="../assets/js/anchor.min.js"></script>
+<script>
+    anchors.add();
+</script>
+
+  </body>
+</html>
