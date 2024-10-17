@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2024-10-16 05:53:54 -0400">
+    <meta http-equiv="last-modified" content="2024-10-17 02:23:08 -0400">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -485,7 +485,7 @@ give a brief overview of some of their offerings to illustrate what is available
  captures from the 5’ end of the transcript. See <a href="https://kb.10xgenomics.com/hc/en-us/articles/360000939852-What-is-the-difference-between-Single-Cell-3-and-5-Gene-Expression-libraries-">this link</a>
  for some information on 3’ vs 5’ gene expression</li>
   <li>“targeted” gene expression – focus on a smaller number of genes that are of 
- particular interest – NOTE: product discontinued in 2023</li>
+ particular interest</li>
 </ul>
 
 <p>One can also choose to profile gene expression on different instruments. The 
@@ -1372,7 +1372,7 @@ it in using the readr
 </span></code></pre></div></div>
 
 <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rows: 47743 Columns: 4
-── Column specification ───────────────────────────────────────────────────────────────────────────────────────────────
+── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────────────
 Delimiter: ","
 chr (4): sample, cell, digest, typeSample
 
@@ -1491,16 +1491,19 @@ directory and save them to a file called ‘lesson03_challenge.Rdata’.</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sessionInfo</span><span class="p">()</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.1 (2024-06-14)
-Platform: x86_64-apple-darwin20
-Running under: macOS 15.0.1
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.0 (2024-04-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 10 x64 (build 19045)
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRblas.0.dylib 
-LAPACK: /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
 
 time zone: America/New_York
 tzcode source: internal
@@ -1518,41 +1521,42 @@ loaded via a namespace (and not attached):
   [1] deldir_2.0-4           pbapply_1.7-2          gridExtra_2.3         
   [4] rlang_1.1.4            magrittr_2.0.3         RcppAnnoy_0.0.22      
   [7] spatstat.geom_3.3-3    matrixStats_1.4.1      ggridges_0.5.6        
- [10] compiler_4.4.1         png_0.1-8              vctrs_0.6.5           
+ [10] compiler_4.4.0         png_0.1-8              vctrs_0.6.5           
  [13] reshape2_1.4.4         crayon_1.5.3           pkgconfig_2.0.3       
  [16] fastmap_1.2.0          labeling_0.4.3         utf8_1.2.4            
  [19] promises_1.3.0         tzdb_0.4.0             bit_4.5.0             
- [22] xfun_0.48              jsonlite_1.8.9         goftest_1.2-3         
+ [22] xfun_0.44              jsonlite_1.8.9         goftest_1.2-3         
  [25] highr_0.11             later_1.3.2            spatstat.utils_3.1-0  
- [28] irlba_2.3.5.1          parallel_4.4.1         cluster_2.1.6         
+ [28] irlba_2.3.5.1          parallel_4.4.0         cluster_2.1.6         
  [31] R6_2.5.1               ica_1.0-3              spatstat.data_3.1-2   
  [34] stringi_1.8.4          RColorBrewer_1.1-3     reticulate_1.39.0     
  [37] spatstat.univar_3.0-1  parallelly_1.38.0      lmtest_0.9-40         
  [40] scattermore_1.2        Rcpp_1.0.13            tensor_1.5            
  [43] future.apply_1.11.2    zoo_1.8-12             R.utils_2.12.3        
  [46] sctransform_0.4.1      httpuv_1.6.15          Matrix_1.7-0          
- [49] splines_4.4.1          igraph_2.0.3           timechange_0.3.0      
- [52] tidyselect_1.2.1       abind_1.4-8            spatstat.random_3.3-2 
- [55] codetools_0.2-20       miniUI_0.1.1.1         spatstat.explore_3.3-2
- [58] listenv_0.9.1          lattice_0.22-6         plyr_1.8.9            
- [61] shiny_1.9.1            withr_3.0.1            ROCR_1.0-11           
- [64] evaluate_1.0.1         Rtsne_0.17             future_1.34.0         
- [67] fastDummies_1.7.4      survival_3.6-4         polyclip_1.10-7       
- [70] fitdistrplus_1.2-1     pillar_1.9.0           KernSmooth_2.23-24    
- [73] plotly_4.10.4          generics_0.1.3         vroom_1.6.5           
- [76] RcppHNSW_0.6.0         hms_1.1.3              munsell_0.5.1         
- [79] scales_1.3.0           globals_0.16.3         xtable_1.8-4          
- [82] glue_1.8.0             lazyeval_0.2.2         tools_4.4.1           
- [85] data.table_1.16.2      RSpectra_0.16-2        RANN_2.6.2            
- [88] leiden_0.4.3.1         dotCall64_1.2          cowplot_1.1.3         
- [91] grid_4.4.1             colorspace_2.1-1       nlme_3.1-164          
- [94] patchwork_1.3.0        cli_3.6.3              spatstat.sparse_3.1-0 
- [97] spam_2.11-0            fansi_1.0.6            viridisLite_0.4.2     
-[100] uwot_0.2.2             gtable_0.3.5           R.methodsS3_1.8.2     
-[103] digest_0.6.37          progressr_0.14.0       ggrepel_0.9.6         
-[106] htmlwidgets_1.6.4      farver_2.1.2           R.oo_1.26.0           
-[109] htmltools_0.5.8.1      lifecycle_1.0.4        httr_1.4.7            
-[112] mime_0.12              bit64_4.5.2            MASS_7.3-60.2         
+ [49] splines_4.4.0          igraph_2.0.3           timechange_0.3.0      
+ [52] tidyselect_1.2.1       abind_1.4-8            rstudioapi_0.16.0     
+ [55] spatstat.random_3.3-2  codetools_0.2-20       miniUI_0.1.1.1        
+ [58] spatstat.explore_3.3-2 listenv_0.9.1          lattice_0.22-6        
+ [61] plyr_1.8.9             shiny_1.9.1            withr_3.0.1           
+ [64] ROCR_1.0-11            evaluate_1.0.1         Rtsne_0.17            
+ [67] future_1.34.0          fastDummies_1.7.4      survival_3.7-0        
+ [70] polyclip_1.10-7        fitdistrplus_1.2-1     pillar_1.9.0          
+ [73] KernSmooth_2.23-24     plotly_4.10.4          generics_0.1.3        
+ [76] vroom_1.6.5            RcppHNSW_0.6.0         hms_1.1.3             
+ [79] munsell_0.5.1          scales_1.3.0           globals_0.16.3        
+ [82] xtable_1.8-4           glue_1.8.0             lazyeval_0.2.2        
+ [85] tools_4.4.0            data.table_1.16.2      RSpectra_0.16-2       
+ [88] RANN_2.6.2             leiden_0.4.3.1         dotCall64_1.2         
+ [91] cowplot_1.1.3          grid_4.4.0             colorspace_2.1-1      
+ [94] nlme_3.1-165           patchwork_1.3.0        cli_3.6.3             
+ [97] spatstat.sparse_3.1-0  spam_2.11-0            fansi_1.0.6           
+[100] viridisLite_0.4.2      uwot_0.2.2             gtable_0.3.5          
+[103] R.methodsS3_1.8.2      digest_0.6.35          progressr_0.14.0      
+[106] ggrepel_0.9.6          htmlwidgets_1.6.4      farver_2.1.2          
+[109] R.oo_1.26.0            htmltools_0.5.8.1      lifecycle_1.0.4       
+[112] httr_1.4.7             mime_0.12              bit64_4.5.2           
+[115] MASS_7.3-61           
 </code></pre></div></div>
 
 <blockquote class="keypoints">
@@ -1622,7 +1626,24 @@ loaded via a namespace (and not attached):
 </span><span class="n">suppressPackageStartupMessages</span><span class="p">(</span><span class="n">library</span><span class="p">(</span><span class="n">SingleCellExperiment</span><span class="p">))</span><span class="w">
 </span><span class="n">suppressPackageStartupMessages</span><span class="p">(</span><span class="n">library</span><span class="p">(</span><span class="n">scds</span><span class="p">))</span><span class="w">
 </span><span class="n">suppressPackageStartupMessages</span><span class="p">(</span><span class="n">library</span><span class="p">(</span><span class="n">Seurat</span><span class="p">))</span><span class="w">
+</span><span class="n">data_dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s1">'../data'</span><span class="w">
 </span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dir</span><span class="p">(</span><span class="n">data_dir</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] "lesson03.Rdata"                                
+ [2] "lesson03_challenge.Rdata"                      
+ [3] "lesson04.rds"                                  
+ [4] "lesson05.Rdata"                                
+ [5] "lesson05.rds"                                  
+ [6] "mouseStSt_exvivo"                              
+ [7] "mouseStSt_exvivo.zip"                          
+ [8] "mouseStSt_invivo"                              
+ [9] "mouseStSt_invivo.zip"                          
+[10] "regev_lab_cell_cycle_genes_mm.fixed.txt"       
+[11] "regev_lab_cell_cycle_genes_mm.fixed.txt_README"
+</code></pre></div></div>
 
 <p><img src="../fig/single_cell_flowchart_0.png" width="800px" alt="Single Cell Flowchart" /></p>
 
@@ -1670,9 +1691,9 @@ We will return to the doublet predictions later in this lesson.</p>
 </span><span class="n">doublet_preds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">colData</span><span class="p">(</span><span class="n">sce</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            used   (Mb) gc trigger   (Mb) limit (Mb)  max used   (Mb)
-Ncells   8122586  433.8   11783995  629.4         NA  11783995  629.4
-Vcells 181873978 1387.6  436791585 3332.5      16384 436788505 3332.5
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   8111953  433.3   14168290  756.7  11252398  601.0
+Vcells 181810210 1387.2  436715070 3331.9 436711315 3331.9
 </code></pre></div></div>
 
 <h2 id="high-level-overview-of-quality-control-and-filtering">High-level overview of quality control and filtering</h2>
@@ -1892,9 +1913,9 @@ inside of the Seurat object.</p>
 </span><span class="n">gc</span><span class="p">()</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            used   (Mb) gc trigger   (Mb) limit (Mb)  max used   (Mb)
-Ncells   8281487  442.3   14817664  791.4         NA  12322168  658.1
-Vcells 182597270 1393.2  596839112 4553.6      16384 629620049 4803.7
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   8269380  441.7   14168290  756.7  12310063  657.5
+Vcells 182530194 1392.6  596761865 4553.0 629553222 4803.2
 </code></pre></div></div>
 
 <p>Add on doublet predictions that we did earlier in this lesson.</p>
@@ -2322,16 +2343,19 @@ Filter the Seurat object by mitochondrial gene expression.</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sessionInfo</span><span class="p">()</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.1 (2024-06-14)
-Platform: x86_64-apple-darwin20
-Running under: macOS 15.0.1
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.0 (2024-04-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 10 x64 (build 19045)
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRblas.0.dylib 
-LAPACK: /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
 
 time zone: America/New_York
 tzcode source: internal
@@ -2356,46 +2380,46 @@ other attached packages:
 [25] tidyverse_2.0.0             knitr_1.48                 
 
 loaded via a namespace (and not attached):
-  [1] RColorBrewer_1.1-3      jsonlite_1.8.9          magrittr_2.0.3         
-  [4] ggbeeswarm_0.7.2        spatstat.utils_3.1-0    farver_2.1.2           
-  [7] zlibbioc_1.50.0         vctrs_0.6.5             ROCR_1.0-11            
- [10] spatstat.explore_3.3-2  htmltools_0.5.8.1       S4Arrays_1.4.1         
- [13] xgboost_1.7.8.1         SparseArray_1.4.8       pROC_1.18.5            
- [16] sctransform_0.4.1       parallelly_1.38.0       KernSmooth_2.23-24     
- [19] htmlwidgets_1.6.4       ica_1.0-3               plyr_1.8.9             
- [22] plotly_4.10.4           zoo_1.8-12              igraph_2.0.3           
- [25] mime_0.12               lifecycle_1.0.4         pkgconfig_2.0.3        
- [28] R6_2.5.1                fastmap_1.2.0           GenomeInfoDbData_1.2.12
- [31] fitdistrplus_1.2-1      future_1.34.0           shiny_1.9.1            
- [34] digest_0.6.37           colorspace_2.1-1        patchwork_1.3.0        
- [37] tensor_1.5              RSpectra_0.16-2         irlba_2.3.5.1          
- [40] labeling_0.4.3          progressr_0.14.0        spatstat.sparse_3.1-0  
- [43] fansi_1.0.6             timechange_0.3.0        polyclip_1.10-7        
- [46] httr_1.4.7              abind_1.4-8             compiler_4.4.1         
- [49] withr_3.0.1             fastDummies_1.7.4       highr_0.11             
- [52] MASS_7.3-60.2           DelayedArray_0.30.1     tools_4.4.1            
- [55] vipor_0.4.7             lmtest_0.9-40           beeswarm_0.4.0         
- [58] httpuv_1.6.15           future.apply_1.11.2     goftest_1.2-3          
- [61] glue_1.8.0              nlme_3.1-164            promises_1.3.0         
- [64] grid_4.4.1              Rtsne_0.17              cluster_2.1.6          
- [67] reshape2_1.4.4          generics_0.1.3          spatstat.data_3.1-2    
- [70] gtable_0.3.5            tzdb_0.4.0              data.table_1.16.2      
- [73] hms_1.1.3               utf8_1.2.4              XVector_0.44.0         
- [76] spatstat.geom_3.3-3     RcppAnnoy_0.0.22        ggrepel_0.9.6          
- [79] RANN_2.6.2              pillar_1.9.0            spam_2.11-0            
- [82] RcppHNSW_0.6.0          later_1.3.2             splines_4.4.1          
- [85] lattice_0.22-6          deldir_2.0-4            survival_3.6-4         
- [88] tidyselect_1.2.1        miniUI_0.1.1.1          pbapply_1.7-2          
- [91] gridExtra_2.3           scattermore_1.2         xfun_0.48              
- [94] stringi_1.8.4           UCSC.utils_1.0.0        lazyeval_0.2.2         
- [97] evaluate_1.0.1          codetools_0.2-20        cli_3.6.3              
-[100] uwot_0.2.2              xtable_1.8-4            reticulate_1.39.0      
-[103] munsell_0.5.1           Rcpp_1.0.13             spatstat.random_3.3-2  
-[106] globals_0.16.3          png_0.1-8               ggrastr_1.0.2          
-[109] spatstat.univar_3.0-1   parallel_4.4.1          dotCall64_1.2          
-[112] listenv_0.9.1           viridisLite_0.4.2       scales_1.3.0           
-[115] ggridges_0.5.6          leiden_0.4.3.1          crayon_1.5.3           
-[118] rlang_1.1.4             cowplot_1.1.3          
+  [1] RColorBrewer_1.1-3      rstudioapi_0.16.0       jsonlite_1.8.9         
+  [4] magrittr_2.0.3          ggbeeswarm_0.7.2        spatstat.utils_3.1-0   
+  [7] farver_2.1.2            zlibbioc_1.50.0         vctrs_0.6.5            
+ [10] ROCR_1.0-11             spatstat.explore_3.3-2  htmltools_0.5.8.1      
+ [13] S4Arrays_1.4.1          xgboost_1.7.8.1         SparseArray_1.4.8      
+ [16] pROC_1.18.5             sctransform_0.4.1       parallelly_1.38.0      
+ [19] KernSmooth_2.23-24      htmlwidgets_1.6.4       ica_1.0-3              
+ [22] plyr_1.8.9              plotly_4.10.4           zoo_1.8-12             
+ [25] igraph_2.0.3            mime_0.12               lifecycle_1.0.4        
+ [28] pkgconfig_2.0.3         R6_2.5.1                fastmap_1.2.0          
+ [31] GenomeInfoDbData_1.2.12 fitdistrplus_1.2-1      future_1.34.0          
+ [34] shiny_1.9.1             digest_0.6.35           colorspace_2.1-1       
+ [37] patchwork_1.3.0         tensor_1.5              RSpectra_0.16-2        
+ [40] irlba_2.3.5.1           labeling_0.4.3          progressr_0.14.0       
+ [43] spatstat.sparse_3.1-0   fansi_1.0.6             timechange_0.3.0       
+ [46] polyclip_1.10-7         httr_1.4.7              abind_1.4-8            
+ [49] compiler_4.4.0          withr_3.0.1             fastDummies_1.7.4      
+ [52] highr_0.11              MASS_7.3-61             DelayedArray_0.30.1    
+ [55] tools_4.4.0             vipor_0.4.7             lmtest_0.9-40          
+ [58] beeswarm_0.4.0          httpuv_1.6.15           future.apply_1.11.2    
+ [61] goftest_1.2-3           glue_1.8.0              nlme_3.1-165           
+ [64] promises_1.3.0          grid_4.4.0              Rtsne_0.17             
+ [67] cluster_2.1.6           reshape2_1.4.4          generics_0.1.3         
+ [70] spatstat.data_3.1-2     gtable_0.3.5            tzdb_0.4.0             
+ [73] data.table_1.16.2       hms_1.1.3               utf8_1.2.4             
+ [76] XVector_0.44.0          spatstat.geom_3.3-3     RcppAnnoy_0.0.22       
+ [79] ggrepel_0.9.6           RANN_2.6.2              pillar_1.9.0           
+ [82] spam_2.11-0             RcppHNSW_0.6.0          later_1.3.2            
+ [85] splines_4.4.0           lattice_0.22-6          deldir_2.0-4           
+ [88] survival_3.7-0          tidyselect_1.2.1        miniUI_0.1.1.1         
+ [91] pbapply_1.7-2           gridExtra_2.3           scattermore_1.2        
+ [94] xfun_0.44               stringi_1.8.4           UCSC.utils_1.0.0       
+ [97] lazyeval_0.2.2          evaluate_1.0.1          codetools_0.2-20       
+[100] cli_3.6.3               uwot_0.2.2              xtable_1.8-4           
+[103] reticulate_1.39.0       munsell_0.5.1           Rcpp_1.0.13            
+[106] spatstat.random_3.3-2   globals_0.16.3          png_0.1-8              
+[109] ggrastr_1.0.2           spatstat.univar_3.0-1   parallel_4.4.0         
+[112] dotCall64_1.2           listenv_0.9.1           viridisLite_0.4.2      
+[115] scales_1.3.0            ggridges_0.5.6          leiden_0.4.3.1         
+[118] crayon_1.5.3            rlang_1.1.4             cowplot_1.1.3          
 </code></pre></div></div>
 
 <blockquote class="keypoints">
@@ -2688,7 +2712,7 @@ genes.</p>
   ..@ commands    :List of 2
   .. ..$ NormalizeData.RNA       :Formal class 'SeuratCommand' [package "SeuratObject"] with 5 slots
   .. .. .. ..@ name       : chr "NormalizeData.RNA"
-  .. .. .. ..@ time.stamp : POSIXct[1:1], format: "2024-10-15 21:26:18"
+  .. .. .. ..@ time.stamp : POSIXct[1:1], format: "2024-10-16 02:16:45"
   .. .. .. ..@ assay.used : chr "RNA"
   .. .. .. ..@ call.string: chr "NormalizeData(., normalization.method = \"LogNormalize\")"
   .. .. .. ..@ params     :List of 5
@@ -2699,7 +2723,7 @@ genes.</p>
   .. .. .. .. ..$ verbose             : logi TRUE
   .. ..$ FindVariableFeatures.RNA:Formal class 'SeuratCommand' [package "SeuratObject"] with 5 slots
   .. .. .. ..@ name       : chr "FindVariableFeatures.RNA"
-  .. .. .. ..@ time.stamp : POSIXct[1:1], format: "2024-10-15 21:26:28"
+  .. .. .. ..@ time.stamp : POSIXct[1:1], format: "2024-10-16 02:16:53"
   .. .. .. ..@ assay.used : chr "RNA"
   .. .. .. ..@ call.string: chr "FindVariableFeatures(., nfeatures = 2000)"
   .. .. .. ..@ params     :List of 12
@@ -2964,16 +2988,19 @@ load it at the beginning of the next lesson.</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sessionInfo</span><span class="p">()</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.1 (2024-06-14)
-Platform: x86_64-apple-darwin20
-Running under: macOS 15.0.1
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.0 (2024-04-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 10 x64 (build 19045)
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRblas.0.dylib 
-LAPACK: /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
 
 time zone: America/New_York
 tzcode source: internal
@@ -2991,39 +3018,39 @@ loaded via a namespace (and not attached):
   [1] deldir_2.0-4           pbapply_1.7-2          gridExtra_2.3         
   [4] rlang_1.1.4            magrittr_2.0.3         RcppAnnoy_0.0.22      
   [7] spatstat.geom_3.3-3    matrixStats_1.4.1      ggridges_0.5.6        
- [10] compiler_4.4.1         png_0.1-8              vctrs_0.6.5           
+ [10] compiler_4.4.0         png_0.1-8              vctrs_0.6.5           
  [13] reshape2_1.4.4         pkgconfig_2.0.3        fastmap_1.2.0         
  [16] labeling_0.4.3         utf8_1.2.4             promises_1.3.0        
- [19] tzdb_0.4.0             xfun_0.48              jsonlite_1.8.9        
+ [19] tzdb_0.4.0             xfun_0.44              jsonlite_1.8.9        
  [22] goftest_1.2-3          highr_0.11             later_1.3.2           
- [25] spatstat.utils_3.1-0   irlba_2.3.5.1          parallel_4.4.1        
+ [25] spatstat.utils_3.1-0   irlba_2.3.5.1          parallel_4.4.0        
  [28] cluster_2.1.6          R6_2.5.1               ica_1.0-3             
  [31] spatstat.data_3.1-2    stringi_1.8.4          RColorBrewer_1.1-3    
  [34] reticulate_1.39.0      spatstat.univar_3.0-1  parallelly_1.38.0     
  [37] lmtest_0.9-40          scattermore_1.2        Rcpp_1.0.13           
  [40] tensor_1.5             future.apply_1.11.2    zoo_1.8-12            
  [43] sctransform_0.4.1      httpuv_1.6.15          Matrix_1.7-0          
- [46] splines_4.4.1          igraph_2.0.3           timechange_0.3.0      
- [49] tidyselect_1.2.1       abind_1.4-8            spatstat.random_3.3-2 
- [52] codetools_0.2-20       miniUI_0.1.1.1         spatstat.explore_3.3-2
- [55] listenv_0.9.1          lattice_0.22-6         plyr_1.8.9            
- [58] shiny_1.9.1            withr_3.0.1            ROCR_1.0-11           
- [61] evaluate_1.0.1         Rtsne_0.17             future_1.34.0         
- [64] fastDummies_1.7.4      survival_3.6-4         polyclip_1.10-7       
- [67] fitdistrplus_1.2-1     pillar_1.9.0           KernSmooth_2.23-24    
- [70] plotly_4.10.4          generics_0.1.3         RcppHNSW_0.6.0        
- [73] hms_1.1.3              munsell_0.5.1          scales_1.3.0          
- [76] globals_0.16.3         xtable_1.8-4           glue_1.8.0            
- [79] lazyeval_0.2.2         tools_4.4.1            data.table_1.16.2     
- [82] RSpectra_0.16-2        RANN_2.6.2             leiden_0.4.3.1        
- [85] dotCall64_1.2          cowplot_1.1.3          grid_4.4.1            
- [88] colorspace_2.1-1       nlme_3.1-164           patchwork_1.3.0       
- [91] cli_3.6.3              spatstat.sparse_3.1-0  spam_2.11-0           
- [94] fansi_1.0.6            viridisLite_0.4.2      uwot_0.2.2            
- [97] gtable_0.3.5           digest_0.6.37          progressr_0.14.0      
-[100] ggrepel_0.9.6          htmlwidgets_1.6.4      farver_2.1.2          
-[103] htmltools_0.5.8.1      lifecycle_1.0.4        httr_1.4.7            
-[106] mime_0.12              MASS_7.3-60.2         
+ [46] splines_4.4.0          igraph_2.0.3           timechange_0.3.0      
+ [49] tidyselect_1.2.1       abind_1.4-8            rstudioapi_0.16.0     
+ [52] spatstat.random_3.3-2  codetools_0.2-20       miniUI_0.1.1.1        
+ [55] spatstat.explore_3.3-2 listenv_0.9.1          lattice_0.22-6        
+ [58] plyr_1.8.9             shiny_1.9.1            withr_3.0.1           
+ [61] ROCR_1.0-11            evaluate_1.0.1         Rtsne_0.17            
+ [64] future_1.34.0          fastDummies_1.7.4      survival_3.7-0        
+ [67] polyclip_1.10-7        fitdistrplus_1.2-1     pillar_1.9.0          
+ [70] KernSmooth_2.23-24     plotly_4.10.4          generics_0.1.3        
+ [73] RcppHNSW_0.6.0         hms_1.1.3              munsell_0.5.1         
+ [76] scales_1.3.0           globals_0.16.3         xtable_1.8-4          
+ [79] glue_1.8.0             lazyeval_0.2.2         tools_4.4.0           
+ [82] data.table_1.16.2      RSpectra_0.16-2        RANN_2.6.2            
+ [85] leiden_0.4.3.1         dotCall64_1.2          cowplot_1.1.3         
+ [88] grid_4.4.0             colorspace_2.1-1       nlme_3.1-165          
+ [91] patchwork_1.3.0        cli_3.6.3              spatstat.sparse_3.1-0 
+ [94] spam_2.11-0            fansi_1.0.6            viridisLite_0.4.2     
+ [97] uwot_0.2.2             gtable_0.3.5           digest_0.6.35         
+[100] progressr_0.14.0       ggrepel_0.9.6          htmlwidgets_1.6.4     
+[103] farver_2.1.2           htmltools_0.5.8.1      lifecycle_1.0.4       
+[106] httr_1.4.7             mime_0.12              MASS_7.3-61           
 </code></pre></div></div>
 
 <blockquote class="keypoints">
@@ -3332,16 +3359,16 @@ in PC space.</p>
 <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Computing SNN
 </code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>21:36:07 UMAP embedding parameters a = 0.9922 b = 1.112
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>02:21:02 UMAP embedding parameters a = 0.9922 b = 1.112
 </code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>21:36:07 Read 44253 rows and found 24 numeric columns
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>02:21:02 Read 44253 rows and found 24 numeric columns
 </code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>21:36:07 Using Annoy for neighbor search, n_neighbors = 30
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>02:21:02 Using Annoy for neighbor search, n_neighbors = 30
 </code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>21:36:07 Building Annoy index with metric = cosine, n_trees = 50
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>02:21:02 Building Annoy index with metric = cosine, n_trees = 50
 </code></pre></div></div>
 
 <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0%   10   20   30   40   50   60   70   80   90   100%
@@ -3351,13 +3378,13 @@ in PC space.</p>
 </code></pre></div></div>
 
 <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**************************************************|
-21:36:12 Writing NN index file to temp file /var/folders/42/vng3302d5jn562sj58fjzszwhbfnwc/T//RtmpiGqXVI/file869525941ffc
-21:36:12 Searching Annoy index using 1 thread, search_k = 3000
-21:36:28 Annoy recall = 100%
-21:36:29 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
-21:36:31 Initializing from normalized Laplacian + noise (using RSpectra)
-21:36:41 Commencing optimization for 200 epochs, with 1888048 positive edges
-21:37:09 Optimization finished
+02:21:06 Writing NN index file to temp file /var/folders/42/vng3302d5jn562sj58fjzszwhbfnwc/T//Rtmp0tpUp7/filefa7af2d397e
+02:21:06 Searching Annoy index using 1 thread, search_k = 3000
+02:21:18 Annoy recall = 100%
+02:21:19 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+02:21:21 Initializing from normalized Laplacian + noise (using RSpectra)
+02:21:29 Commencing optimization for 200 epochs, with 1888048 positive edges
+02:21:53 Optimization finished
 </code></pre></div></div>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">liver</span><span class="o">$</span><span class="n">after_harmony_clusters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">liver</span><span class="o">$</span><span class="n">seurat_clusters</span><span class="w">
@@ -3376,7 +3403,7 @@ clusters 13 and 21 appear in our new clustering.</p>
   21   0   1   0   1   0   0   0 309   0   0   0   0   0   0   0
 </code></pre></div></div>
 
-<p>These cells are nearly <em>all</em> in one new cluster. This cluster
+<p>These cells are nearly <em>all</em> in one new cluster, cluster 7. This cluster
 exclusively expresses the B cell gene Cd79a, suggesting that the
 harmony batch correction has accomplished the task that we had hoped.</p>
 
@@ -3417,7 +3444,7 @@ that we are all working with a common cluster numbering system.
 Don’t worry about how we got this list of genes for now.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">genes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s1">'Socs3'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Gnmt'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Timd4'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Ms4a4b'</span><span class="p">,</span><span class="w"> </span><span class="s1">'S100a4'</span><span class="p">,</span><span class="w">
-           </span><span class="s1">'Adgrg6'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Cd79a'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Dck'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Siglech'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Dcn'</span><span class="p">,</span><span class="w"> 
+           </span><span class="s1">'Adgrg6'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Cd79a'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Siglech'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Dcn'</span><span class="p">,</span><span class="w"> 
            </span><span class="s1">'Wdfy4'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Vwf'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Spp1'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Hdc'</span><span class="p">)</span><span class="w">
 </span><span class="n">Idents</span><span class="p">(</span><span class="n">liver</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s1">'after_harmony_clusters'</span><span class="w">
 </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">AverageExpression</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">genes</span><span class="p">)[[</span><span class="s1">'RNA'</span><span class="p">]]</span><span class="w">
@@ -3428,15 +3455,16 @@ First group.by variable `ident` starts with a number, appending `g` to ensure va
 This message is displayed once per session.
 </code></pre></div></div>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">highest_clu</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unname</span><span class="p">(</span><span class="n">colnames</span><span class="p">(</span><span class="n">a</span><span class="p">))[</span><span class="n">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">which.max</span><span class="p">)]</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">highest_clu</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">colnames</span><span class="p">(</span><span class="n">a</span><span class="p">)[</span><span class="n">apply</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">genes</span><span class="p">,</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">which.max</span><span class="p">)]</span><span class="w">
 
-</span><span class="n">cluster_converter</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">setNames</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="s1">'c'</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="o">:</span><span class="m">14</span><span class="p">)),</span><span class="w"> </span><span class="n">highest_clu</span><span class="p">)</span><span class="w">
-</span><span class="n">remaining_clusters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">setdiff</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">Idents</span><span class="p">(</span><span class="n">liver</span><span class="p">))),</span><span class="w">
+</span><span class="n">cluster_converter</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">setNames</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="s1">'c'</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="o">:</span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="o">:</span><span class="m">14</span><span class="p">)),</span><span class="w"> </span><span class="n">highest_clu</span><span class="p">)</span><span class="w">
+</span><span class="n">remaining_clusters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">setdiff</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="s1">'g'</span><span class="p">,</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">Idents</span><span class="p">(</span><span class="n">liver</span><span class="p">)))),</span><span class="w">
                               </span><span class="n">highest_clu</span><span class="p">)</span><span class="w">
-</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">AverageExpression</span><span class="p">(</span><span class="n">subset</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">idents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">remaining_clusters</span><span class="p">),</span><span class="w">
-                       </span><span class="n">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Lyve1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Cd5l"</span><span class="p">))[[</span><span class="s1">'RNA'</span><span class="p">]]</span><span class="w">
+</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">AverageExpression</span><span class="p">(</span><span class="n">subset</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> 
+                              </span><span class="n">idents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"g"</span><span class="p">,</span><span class="w"> </span><span class="s1">''</span><span class="p">,</span><span class="w"> </span><span class="n">remaining_clusters</span><span class="p">)),</span><span class="w">
+                       </span><span class="n">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Lyve1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Cd5l"</span><span class="p">,</span><span class="w"> </span><span class="s1">'Igfbp6'</span><span class="p">))[[</span><span class="s1">'RNA'</span><span class="p">]]</span><span class="w">
 </span><span class="n">highest_clu</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unname</span><span class="p">(</span><span class="n">colnames</span><span class="p">(</span><span class="n">a</span><span class="p">))[</span><span class="n">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">which.max</span><span class="p">)]</span><span class="w">
-</span><span class="n">cluster_converter</span><span class="p">[</span><span class="n">highest_clu</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s1">'c2'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c15'</span><span class="p">)</span><span class="w">
+</span><span class="n">cluster_converter</span><span class="p">[</span><span class="n">highest_clu</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s1">'c15'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c2'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c8'</span><span class="p">)</span><span class="w">
 
 </span><span class="n">liver</span><span class="o">$</span><span class="n">renamed_clusters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unname</span><span class="p">(</span><span class="n">cluster_converter</span><span class="p">[</span><span class="n">paste0</span><span class="p">(</span><span class="s1">'g'</span><span class="p">,</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">liver</span><span class="o">$</span><span class="n">after_harmony_clusters</span><span class="p">))])</span><span class="w">
 </span><span class="n">Idents</span><span class="p">(</span><span class="n">liver</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s1">'renamed_clusters'</span><span class="w">
@@ -3534,12 +3562,12 @@ the <code class="language-plaintext highlighter-rouge">markers</code> data.frame
 <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code># A tibble: 6 × 6
   cluster gene    avg_log2FC pct.1 pct.2 p_val_adj
   &lt;fct&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
-1 c12     Oit3          2.97 0.987 0.192 1.46e-232
-2 c12     Flt4          2.97 0.98  0.192 8.82e-228
-3 c12     Cyp4b1        3.00 0.96  0.191 2.43e-218
-4 c12     Stab2         3.00 0.973 0.212 7.09e-217
-5 c12     Fam167b       2.95 0.983 0.226 2.61e-215
-6 c12     Adam23        2.89 0.919 0.171 4.09e-207
+1 c0      Flt4          2.98 0.987 0.188 2.26e-242
+2 c0      Stab2         3.12 0.98  0.206 8.48e-240
+3 c0      Oit3          2.95 0.987 0.197 3.98e-237
+4 c0      Adam23        2.97 0.94  0.162 4.79e-232
+5 c0      Fam167b       2.97 0.997 0.223 1.68e-229
+6 c0      Cldn5         2.68 0.99  0.189 1.58e-225
 </code></pre></div></div>
 
 <p>In the <code class="language-plaintext highlighter-rouge">markers</code> tibble, the columns have the following meanings:</p>
@@ -3585,33 +3613,40 @@ wish to try it.</p>
   </span><span class="n">arrange</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code># A tibble: 14 × 4
-# Groups:   cluster [14]
-   cluster `1`           `2`        `3`          
-   &lt;fct&gt;   &lt;chr&gt;         &lt;chr&gt;      &lt;chr&gt;        
- 1 c12     Plet1os       Alox12     AC126280.1   
- 2 c8      Nrg1          Gja5       Cyp1a1       
- 3 c5      Wnt9b         Ptprr      Tnni3        
- 4 c13     Gsta2         A2ml1      Cib3         
- 5 c4      1700011H14Rik Fermt1     Cldn6        
- 6 c15     Flrt1         AC126280.1 Rab3b        
- 7 c9      Gpat2         Lrrc4c     Sprn         
- 8 c14     Prf1          Gzma       Samd3        
- 9 c1      Cx3cr1        F13a1      Chil3        
-10 c6      Cd79a         Ms4a1      Fcer2a       
-11 c7      Gm21762       Klk1b27    Pgam2        
-12 c2      Folr2         Kcnj16     Cd209f       
-13 c10     Xcr1          Gcsam      A530099J19Rik
-14 c0      S100a8        S100a9     Retnlg       
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code># A tibble: 15 × 4
+# Groups:   cluster [15]
+   cluster `1`           `2`     `3`       
+   &lt;fct&gt;   &lt;chr&gt;         &lt;chr&gt;   &lt;chr&gt;     
+ 1 c0      Lyve1         Plet1os AC126280.1
+ 2 c6      Nrg1          Gja5    Cyp1a1    
+ 3 c12     Wnt9b         Ajap1   Tnni3     
+ 4 c1      Gsta2         Gm27216 Gstm3     
+ 5 c13     1700011H14Rik Fermt1  Cldn6     
+ 6 c2      Lyve1         Id4     Flrt1     
+ 7 c10     Gpat2         Bmp10   Adamts13  
+ 8 c8      Upk3b         Msln    Chst4     
+ 9 c4      Gm2682        Gzma    Samd3     
+10 c5      Cx3cr1        F13a1   Tnip3     
+11 c7      Cd79a         Fcmr    Cr2       
+12 c9      Siglech       Gm21762 Pgam2     
+13 c3      Folr2         Vsig4   Fam167a   
+14 c11     Xcr1          Gcsam   Sept3     
+15 c14     S100a8        S100a9  Stfa2l1   
 </code></pre></div></div>
 
 <p>Recognizing these genes might be a big challenge if you are not used to looking 
-at single cell gene expression. Let’s check out expression of the very top genes
-in each cell cluster:</p>
+at single cell gene expression. Let’s check out expression of some top genes
+in each cell cluster. These genes were previously identified as the top
+marker for similar clusters in a previous version of Seurat. The list of
+genes is no longer identical, however all of these genes are among
+the top markers:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">top_markers</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">group_by</span><span class="p">(</span><span class="n">markers</span><span class="p">,</span><span class="w"> </span><span class="n">cluster</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
-                 </span><span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">avg_log2FC</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-                 </span><span class="n">top_n</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">avg_log2FC</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">pull</span><span class="p">(</span><span class="n">gene</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># top_markers &lt;- group_by(markers, cluster) %&gt;% </span><span class="w">
+</span><span class="c1">#                  arrange(desc(avg_log2FC)) %&gt;%</span><span class="w">
+</span><span class="c1">#                  top_n(1, avg_log2FC) %&gt;% pull(gene)</span><span class="w">
+</span><span class="n">top_markers</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"S100a9"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Dcn"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Spp1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Igkc"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Ccl5"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Rspo3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Siglech"</span><span class="p">,</span><span class="w"> 
+               </span><span class="s2">"Fabp1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Cst3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Lyz2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Ly6a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Clec4f"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Cd5l"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Kdr"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Clec4g"</span><span class="p">)</span><span class="w">
+
 </span><span class="n">VlnPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top_markers</span><span class="p">,</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">flip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
@@ -3745,19 +3780,14 @@ all the other cells:</p>
 <p class="caption">plot of chunk sp_markers</p>
 </div>
 
-<p>This looks better – the markers are more specific.
-We do have a marker for the hepatocytes (cluster c1) that looks better
-than before. However, this gene – <em>Inmt</em> – does not seem to be a very
-good hepatocyte marker according to the literature. Thus our filter
-to remove non-specific markers may have gotten rid of most of the 
-strongly hepatocyte-specific gene expression.</p>
+<p>This looks better – the markers are more specific.</p>
 
 <p>In this violin plot we do have
 some instances where a marker seems to be specific to two or three cell
-clusters (e.g. Vsig4, Stab2, etc).</p>
+clusters (e.g. Lyve1).</p>
 
-<p>Stab2 is marking the endothelial cells we already identified (or at least
-some of them). Let’s look at Vsig4:</p>
+<p>In an older version of Seurat the gene Vsig4 was
+also picked out. Let’s try to figure out what is going on with Vsig4:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FeaturePlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="s2">"Vsig4"</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s1">'lightgrey'</span><span class="p">,</span><span class="w"> </span><span class="s1">'red'</span><span class="p">),</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
             </span><span class="n">label.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
@@ -3768,13 +3798,15 @@ some of them). Let’s look at Vsig4:</p>
 <p class="caption">plot of chunk vsig4</p>
 </div>
 
-<p>This is marking clusters c3, c8, and c15.
-Clusters c3 and c8 are very near each other. Vsig4 is an immune
+<p>This is marking clusters c3 and a small cluster 
+that may be labeled as c15
+(or may be part of c11).
+Vsig4 is an immune
 protein (V-set and immunoglobulin domain containing 4).
 The protein
 <a href="https://www.proteinatlas.org/ENSG00000155659-VSIG4/tissue">is expressed</a>
 selectively in – among other cell types – Kupffer cells,
-which are the resident macrophages in the liver. Clusters c3 and c8 may be
+which are the resident macrophages in the liver. Cluster c3 may be
 Kupffer cells. Let’s check a famous macrophage marker,
 F4/80 (gene name Adgre1):</p>
 
@@ -3787,13 +3819,15 @@ F4/80 (gene name Adgre1):</p>
 <p class="caption">plot of chunk adgre1</p>
 </div>
 
-<p>Cluster c15 expresses <em>Adgre1</em> but is near the hepatocyte cluster
+<p>Cluster c15 (if it exists)
+expresses <em>Adgre1</em> but is near the hepatocyte cluster
 we just discussed. In fact it is located between the hepatocyte and
 Kupffer cell clusters. Cluster c15 might represent hepatocyte-Kupffer cell
 doublets. Consistent with this theory, cluster c15 has intermediate expression
 of Kupffer cell-specific <em>Adgre1</em> and hepatocyte-specific <em>Fabp1</em>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">VlnPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Adgre1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Fabp1"</span><span class="p">),</span><span class="w"> </span><span class="n">idents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s1">'c3'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c15'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c1'</span><span class="p">),</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">VlnPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Adgre1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Fabp1"</span><span class="p">),</span><span class="w"> </span><span class="n">idents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s1">'c3'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c15'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c11'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c1'</span><span class="p">),</span><span class="w"> 
+        </span><span class="n">sort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">pt.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <div class="figure" style="text-align: center">
@@ -3816,20 +3850,15 @@ of Kupffer cell-specific <em>Adgre1</em> and hepatocyte-specific <em>Fabp1</em>.
                  </span><span class="n">cluster_num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'c15'</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s1">'KH doub.'</span><span class="p">,</span><span class="w">          </span><span class="c1"># Kupffer-hepatocyte doublets</span><span class="w">
                  </span><span class="kc">TRUE</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">cluster_num</span><span class="p">))</span><span class="w">
 
-</span><span class="n">liver</span><span class="o">$</span><span class="n">labels</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">deframe</span><span class="p">(</span><span class="n">labels</span><span class="p">)[</span><span class="nf">as.character</span><span class="p">(</span><span class="n">liver</span><span class="o">$</span><span class="n">renamed_clusters</span><span class="p">)]</span><span class="w">
+</span><span class="n">liver</span><span class="o">$</span><span class="n">labels</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deframe</span><span class="p">(</span><span class="n">labels</span><span class="p">)[</span><span class="nf">as.character</span><span class="p">(</span><span class="n">liver</span><span class="o">$</span><span class="n">renamed_clusters</span><span class="p">)],</span><span class="w">
+                           </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cells</span><span class="p">(</span><span class="n">liver</span><span class="p">))</span><span class="w">
+</span><span class="n">UMAPPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">label.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">group.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'labels'</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NoLegend</span><span class="p">()</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: No cell overlap between new meta data and Seurat object
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">UMAPPlot</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">label.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">group.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'labels'</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NoLegend</span><span class="p">()</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext warning highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Warning: The following requested variables were not found: labels
-</code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in `[.data.frame`(data, , group): undefined columns selected
-</code></pre></div></div>
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-06-labelling-1.png" alt="plot of chunk labelling" width="612" />
+<p class="caption">plot of chunk labelling</p>
+</div>
 
 <blockquote class="challenge">
   <h2 id="challenge-1">Challenge 1</h2>
@@ -3865,15 +3894,6 @@ Cluster c13: Spp1, Cholangiocytes</p>
 <p>Make sure that you update the <code class="language-plaintext highlighter-rouge">liver</code> object with the cell cluster 
 annotations in the solution to the challenge above.</p>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in (function (cond) : error in evaluating the argument 'x' in selecting a method for function 'unique': 'labels' not found in this Seurat object
- 
-</code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in `x[[i, drop = TRUE]]`:
-! 'labels' not found in this Seurat object
- 
-</code></pre></div></div>
-
 <h2 id="comparing-cell-types-to-original-paper">Comparing cell types to original paper</h2>
 
 <p>The research group that generated this data published cell type annotation for 
@@ -3891,21 +3911,11 @@ each cell. We will read in this annotation an compare it with ours.</p>
                      </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">liver</span><span class="o">$</span><span class="n">labels</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in `x[[i, drop = TRUE]]`:
-! 'labels' not found in this Seurat object
- 
-</code></pre></div></div>
-
 <p>And finally, join the author’s annotation with our annotation.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">annot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">left_join</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">metadata</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'cell'</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
            </span><span class="n">dplyr</span><span class="o">::</span><span class="n">rename</span><span class="p">(</span><span class="n">our_annot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">label</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in `left_join()`:
-! Join columns in `x` must be present in the data.
-✖ Problem with `cell`.
-</code></pre></div></div>
 
 <p>Next, we will count the number of times that each pair of cell types occurs in
 the author’s annotation and our annotation.</p>
@@ -3913,11 +3923,267 @@ the author’s annotation and our annotation.</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">annot</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
   </span><span class="n">dplyr</span><span class="o">::</span><span class="n">count</span><span class="p">(</span><span class="n">our_annot</span><span class="p">,</span><span class="w"> </span><span class="n">annot</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
   </span><span class="n">pivot_wider</span><span class="p">(</span><span class="n">names_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">our_annot</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">values_fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">kable</span><span class="p">()</span><span class="w">
+  </span><span class="n">knitr</span><span class="o">::</span><span class="n">kable</span><span class="p">()</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'annot' not found
-</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">annot</th>
+      <th style="text-align: right">B cells</th>
+      <th style="text-align: right">ECs</th>
+      <th style="text-align: right">Kupffer cells</th>
+      <th style="text-align: right">T cells</th>
+      <th style="text-align: right">cCD1</th>
+      <th style="text-align: right">cholangiocytes</th>
+      <th style="text-align: right">fibroblast/stellate</th>
+      <th style="text-align: right">hepatocytes</th>
+      <th style="text-align: right">monocytes</th>
+      <th style="text-align: right">neutrophils</th>
+      <th style="text-align: right">pDCs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">B cells</td>
+      <td style="text-align: right">964</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">cDC2s</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">370</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Basophils</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">23</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Endothelial cells</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">20224</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">3</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">8</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hepatocytes</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">11</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">8570</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Kupffer cells</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">53</td>
+      <td style="text-align: right">8018</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">108</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">73</td>
+      <td style="text-align: right">19</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">T cells</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1221</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">3</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">cDC1s</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">14</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">400</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">8</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fibroblasts</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">96</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">735</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ILC1s</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">386</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Monocytes &amp; Monocyte-derived cells</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">9</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">1059</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">NK cells</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">214</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Mig. cDCs</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">59</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Cholangiocytes</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">326</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">HsPCs</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Neutrophils</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">293</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pDCs</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">951</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Many of the annotations that we found match what the authors found! This is
 encouraging and provides a measure of reproducibility in the analysis.</p>
@@ -3944,31 +4210,18 @@ test could look by making up a fake experimental factor.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraries</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unique</span><span class="p">(</span><span class="n">liver</span><span class="o">$</span><span class="n">sample</span><span class="p">)</span><span class="w">
 </span><span class="n">treatment_group</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">setNames</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s1">'control'</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="nf">rep</span><span class="p">(</span><span class="s1">'drug'</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)),</span><span class="w"> </span><span class="n">libraries</span><span class="p">)</span><span class="w">
-</span><span class="n">liver</span><span class="o">$</span><span class="n">trt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">treatment_group</span><span class="p">[</span><span class="n">liver</span><span class="o">$</span><span class="n">sample</span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
+</span><span class="n">liver</span><span class="o">$</span><span class="n">trt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">grp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">treatment_group</span><span class="p">[</span><span class="n">liver</span><span class="o">$</span><span class="n">sample</span><span class="p">],</span><span class="w"> </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cells</span><span class="p">(</span><span class="n">liver</span><span class="p">))</span><span class="w">
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: No cell overlap between new meta data and Seurat object
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hepatocytes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"hepatocytes"</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in `FetchData()`:
-! None of the requested variables were found: 
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Idents</span><span class="p">(</span><span class="n">hepatocytes</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"trt"</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in eval(ei, envir): object 'hepatocytes' not found
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">UMAPPlot</span><span class="p">(</span><span class="n">hepatocytes</span><span class="p">,</span><span class="w"> </span><span class="n">split.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'trt'</span><span class="p">,</span><span class="w"> </span><span class="n">group.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'labels'</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w">
+</span><span class="n">hepatocytes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">liver</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"hepatocytes"</span><span class="p">)</span><span class="w">
+</span><span class="n">Idents</span><span class="p">(</span><span class="n">hepatocytes</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"trt"</span><span class="w">
+</span><span class="n">UMAPPlot</span><span class="p">(</span><span class="n">hepatocytes</span><span class="p">,</span><span class="w"> </span><span class="n">split.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'trt'</span><span class="p">,</span><span class="w"> </span><span class="n">group.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'labels'</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w">
          </span><span class="n">label.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'hepatocytes' not found
-</code></pre></div></div>
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-06-fake-1.png" alt="plot of chunk fake" width="720" />
+<p class="caption">plot of chunk fake</p>
+</div>
 
 <p>We will look for differential expression between the 
 control and drug administration groups defined
@@ -3983,9 +4236,6 @@ marker genes.</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">deg1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">FindMarkers</span><span class="p">(</span><span class="n">hepatocytes</span><span class="p">,</span><span class="w"> </span><span class="n">ident.1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'drug'</span><span class="p">,</span><span class="w"> </span><span class="n">ident.2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'control'</span><span class="p">,</span><span class="w">
                     </span><span class="n">logfc.threshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">only.pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'hepatocytes' not found
-</code></pre></div></div>
 
 <p>However this approach is not ideal. It may work OK if we only have on
 mouse sample from each treatment group, with thousands of cells profiled
@@ -4004,7 +4254,17 @@ when in actuality the response is minimal only in
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">head</span><span class="p">(</span><span class="n">deg1</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'head': object 'deg1' not found
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                 p_val avg_log2FC pct.1 pct.2     p_val_adj
+Malat1    0.000000e+00  1.7019229 0.749 0.339  0.000000e+00
+AY036118  0.000000e+00  1.8928954 0.813 0.421  0.000000e+00
+Cyp3a11   0.000000e+00 -3.1288992 0.277 0.644  0.000000e+00
+Rpl36al   0.000000e+00 -1.0412343 0.704 0.899  0.000000e+00
+Uox       0.000000e+00 -0.8972077 0.956 0.983  0.000000e+00
+Gm42418   0.000000e+00  1.7236741 0.978 0.973  0.000000e+00
+Gstm1    5.705851e-293 -0.8584496 0.953 0.979 1.148017e-288
+Car3     6.216806e-270 -0.7390462 0.980 0.996 1.250821e-265
+Nme2     4.110392e-259 -3.7711602 0.046 0.337 8.270108e-255
+C3       5.970126e-252  1.0308801 0.910 0.716 1.201189e-247
 </code></pre></div></div>
 
 <p>Wow! We have a lot of genes with apparently very strong statistically
@@ -4032,21 +4292,23 @@ This could look like the following:</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make pseudobulks.</span><span class="w">
 </span><span class="n">pseudobulk</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">AggregateExpression</span><span class="p">(</span><span class="n">hepatocytes</span><span class="p">,</span><span class="w"> </span><span class="n">slot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'counts'</span><span class="p">,</span><span class="w"> 
                                   </span><span class="n">group.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'sample'</span><span class="p">,</span><span class="w"> </span><span class="n">assays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'RNA'</span><span class="p">)[[</span><span class="s1">'RNA'</span><span class="p">]]</span><span class="w">
+</span><span class="nf">dim</span><span class="p">(</span><span class="n">pseudobulk</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'hepatocytes' not found
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">dim</span><span class="p">(</span><span class="n">pseudobulk</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'pseudobulk' not found
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 20120     9
 </code></pre></div></div>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">head</span><span class="p">(</span><span class="n">pseudobulk</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'head': object 'pseudobulk' not found
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6 x 9 sparse Matrix of class "dgCMatrix"
+        CS144 CS48 CS52 CS53 CS88 CS89 CS92 CS96 CS97
+Xkr4        .    .    .    .    .    .    .    .    .
+Rp1         .    .    .    .    .    .    .    .    .
+Sox17       9    1    5    .   11    1    7   34    .
+Mrpl15    812 3068 1480   11 1595  228 1367 2752  203
+Lypla1    455 2161  826    3  622  162  536 1067  208
+Gm37988     1    8    8    .    1    .    2    3    1
 </code></pre></div></div>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Run DESeq2</span><span class="w">
@@ -4054,47 +4316,57 @@ This could look like the following:</p>
   </span><span class="n">as_tibble</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">distinct</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">column_to_rownames</span><span class="p">(</span><span class="s1">'sample'</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">mutate</span><span class="p">(</span><span class="n">trt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">trt</span><span class="p">))</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': object 'hepatocytes' not found
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pseudobulk_metadata</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pseudobulk_metadata</span><span class="p">[</span><span class="n">colnames</span><span class="p">(</span><span class="n">pseudobulk</span><span class="p">),</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">drop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'pseudobulk_metadata' not found
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DESeqDataSetFromMatrix</span><span class="p">(</span><span class="n">pseudobulk</span><span class="p">,</span><span class="w"> 
+</span><span class="n">pseudobulk_metadata</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pseudobulk_metadata</span><span class="p">[</span><span class="n">colnames</span><span class="p">(</span><span class="n">pseudobulk</span><span class="p">),</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">drop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">]</span><span class="w">
+</span><span class="n">dds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DESeqDataSetFromMatrix</span><span class="p">(</span><span class="n">pseudobulk</span><span class="p">,</span><span class="w"> 
                               </span><span class="n">colData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pseudobulk_metadata</span><span class="p">,</span><span class="w"> 
                               </span><span class="n">design</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trt</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'ncol': object 'pseudobulk' not found
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>converting counts to integer mode
 </code></pre></div></div>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DESeq</span><span class="p">(</span><span class="n">dds</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"LRT"</span><span class="p">,</span><span class="w"> </span><span class="n">reduced</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'dds' not found
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>estimating size factors
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>estimating dispersions
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gene-wise dispersion estimates
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mean-dispersion relationship
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>final dispersion estimates
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fitting model and testing
 </code></pre></div></div>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">res1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">results</span><span class="p">(</span><span class="n">trt</span><span class="p">)</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">res1</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'trt' not found
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">head</span><span class="p">(</span><span class="n">res1</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'head': object 'res1' not found
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>log2 fold change (MLE): trt drug vs control 
+LRT p-value: '~ trt' vs '~ 1' 
+DataFrame with 6 rows and 6 columns
+         baseMean log2FoldChange     lfcSE      stat    pvalue      padj
+        &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt; &lt;numeric&gt; &lt;numeric&gt; &lt;numeric&gt;
+Xkr4      0.00000             NA        NA        NA        NA        NA
+Rp1       0.00000             NA        NA        NA        NA        NA
+Sox17     3.34090      0.9227920  1.388072 0.6858481  0.407580         1
+Mrpl15  616.31410      0.0341665  0.224516 0.0979955  0.754248         1
+Lypla1  329.82425     -0.0449272  0.260602 0.2829471  0.594776         1
+Gm37988   1.17336     -0.8612866  1.783219 0.0289742  0.864839         1
 </code></pre></div></div>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">sum</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">res1</span><span class="o">$</span><span class="n">padj</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">res1</span><span class="o">$</span><span class="n">padj</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: object 'res1' not found
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0
 </code></pre></div></div>
 
 <p>No genes are significantly differentially expressed using this 
@@ -4459,16 +4731,19 @@ Here are a few suggestions of things that you could try:</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sessionInfo</span><span class="p">()</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.1 (2024-06-14)
-Platform: x86_64-apple-darwin20
-Running under: macOS 15.0.1
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.0 (2024-04-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 10 x64 (build 19045)
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRblas.0.dylib 
-LAPACK: /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
 
 time zone: America/New_York
 tzcode source: internal
@@ -4480,9 +4755,10 @@ other attached packages:
 [1] knitr_1.48
 
 loaded via a namespace (and not attached):
- [1] compiler_4.4.1  magrittr_2.0.3  cli_3.6.3       tools_4.4.1    
- [5] glue_1.8.0      vctrs_0.6.5     stringi_1.8.4   stringr_1.5.1  
- [9] xfun_0.48       lifecycle_1.0.4 rlang_1.1.4     evaluate_1.0.1 
+ [1] compiler_4.4.0    magrittr_2.0.3    cli_3.6.3         tools_4.4.0      
+ [5] glue_1.8.0        rstudioapi_0.16.0 vctrs_0.6.5       stringi_1.8.4    
+ [9] stringr_1.5.1     xfun_0.44         lifecycle_1.0.4   rlang_1.1.4      
+[13] evaluate_1.0.1   
 </code></pre></div></div>
 
 <blockquote class="keypoints">
